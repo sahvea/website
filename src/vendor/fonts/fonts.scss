@@ -1,0 +1,26 @@
+@font-face {
+  font-family: 'NotCourierSans';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url('./NotCourierSans.woff2') format('woff2'),
+       url('./NotCourierSans.woff') format('woff');
+}
+
+@font-face {
+  font-family: 'NotCourierSans';
+  font-style: normal;
+  font-weight: 700;
+  font-display: swap;
+  src: url('./NotCourierSans-Bold.woff2') format('woff2'),
+       url('./NotCourierSans-Bold.woff') format('woff');
+}
+
+@font-face {
+  font-family: 'KPProgrammerAlternatesNBP';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url('./KpProgrammerAlternatesNbp.woff2') format('woff2'),
+       url('./KpProgrammerAlternatesNbp.woff') format('woff');
+}
