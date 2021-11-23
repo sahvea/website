@@ -1,0 +1,15 @@
+.lead {
+  background-image: url('../../images/bg-main-1920.jpg');
+  background-position: top left;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+.lead__title {
+  margin: 0;
+  max-width: 760px;
+  font-family: $font_main;
+  font-size: 110px;
+  line-height: 1;
+  text-shadow: 4px 4px 4px rgba($color_black, .25);
+}

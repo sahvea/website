@@ -1,8 +1,10 @@
+import Lead from './Lead/Lead';
+
 function Main() {
   return (
-    <section className="lead">
-
-    </section>
+    <>
+      <Lead />
+    </>
   );
 }
 
