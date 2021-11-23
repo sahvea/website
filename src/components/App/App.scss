@@ -6,11 +6,13 @@ $color_dark: #212121;
 $color_white: #fff;
 $color_grey: #c4c4c4;
 
+$cursor_hover: url('../../images/cursor/cursor-hover.svg') 10 10, pointer;
+
 
 .app {
   margin: 0 auto;
   min-width: 320px;
-  max-width: 1920px;
+  // max-width: 1920px;
   box-sizing: border-box;
   background-color: $color_dark;
   font-family: $font_main;
@@ -22,11 +24,19 @@ $color_grey: #c4c4c4;
   cursor: url('../../images/cursor/cursor.svg') 6 6, auto;
 }
 
-a, button {
-  cursor: url('../../images/cursor/cursor-hover.svg') 10 10, pointer;
+.app__link, .app__button {
+  cursor: $cursor_hover;
+}
+
+.app__link {
+  color: $color_white;
+  text-decoration: none;
+  transition: .2s ease;
 }
 
 .app__section {
-  padding: 120px 135px;
-  height: 100vh;
+  position: relative;
+  min-height: 100vh;
+  box-sizing: border-box;
+  padding: 135px 120px;
 }

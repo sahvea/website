@@ -1,0 +1,42 @@
+.anchor-link {
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  cursor: $cursor_hover;
+
+  &::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 2px;
+    height: 135px;
+    background-color: $color_white;
+  }
+
+  &:hover .anchor-link__link{
+    opacity: 1;
+    visibility: visible;
+  }
+}
+
+.anchor-link__link {
+  display: block;
+  width: 120px;
+  height: 190px;
+  box-sizing: border-box;
+  padding-top: 14px;
+  border-radius: 30px 30px 0 0;
+  background-color: rgba($color_grey, .35);
+  font-family: $font_main;
+  font-weight: 700;
+  font-size: 18px;
+  line-height: 1;
+  letter-spacing: -0.05em;
+  text-align: center;
+  opacity: 0;
+  visibility: hidden;
+  transition-duration: .4s;
+}
