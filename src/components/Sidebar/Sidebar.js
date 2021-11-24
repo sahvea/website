@@ -19,24 +19,44 @@ function Sidebar() {
       <nav className="sidebar__navigation">
         <ul className="sidebar__nav-list">
           <li className="sidebar__nav-item">
-            <NavLink to="/" className="app__link sidebar__nav-link" activeClassName="sidebar__nav-link_active" onMouseEnter={handleMouseOver} onMouseLeave={handleMouseOut} >Homepage
-              <span className="sidebar__deco-link">Homepage</span>
+            <NavLink to="/"
+              className="app__link sidebar__nav-link"
+              activeClassName="sidebar__nav-link_active"
+              data-hover="Homepage"
+              onMouseEnter={handleMouseOver}
+              onMouseLeave={handleMouseOut}
+            >
+                Homepage
             </NavLink>
           </li>
           <li className="sidebar__nav-item">
-            <NavLink to="/projects" className="app__link sidebar__nav-link" activeClassName="sidebar__nav-link_active" onMouseEnter={handleMouseOver} onMouseLeave={handleMouseOut} >Projects
-              <span className="sidebar__deco-link">Projects</span>
+            <NavLink to="/projects"
+              className="app__link sidebar__nav-link"
+              activeClassName="sidebar__nav-link_active"
+              data-hover="Projects"
+              onMouseEnter={handleMouseOver}
+              onMouseLeave={handleMouseOut}
+            >
+              Projects
             </NavLink>
           </li>
           <li className="sidebar__nav-item">
-            <NavLink to="/contact" className="app__link sidebar__nav-link" activeClassName="sidebar__nav-link_active" onMouseEnter={handleMouseOver} onMouseLeave={handleMouseOut} >Contact
-              <span className="sidebar__deco-link">Contact</span>
+            <NavLink to="/contact"
+              className="app__link sidebar__nav-link"
+              activeClassName="sidebar__nav-link_active"
+              data-hover="Contact"
+              onMouseEnter={handleMouseOver}
+              onMouseLeave={handleMouseOut}
+            >
+              Contact
             </NavLink>
           </li>
         </ul>
       </nav>
 
-      <button className="app__button sidebar__lang-button" type="button" value="en">рус</button>
+      <button className="app__button sidebar__lang-button" type="button" value="en">
+        <span className="sidebar__lang-text" data-hover="рус">рус</span>
+      </button>
     </aside>
   );
 }

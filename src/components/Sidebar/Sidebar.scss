@@ -58,35 +58,36 @@
   font-size: 30px;
   line-height: 1;
   text-transform: uppercase;
-  text-align: right;
 
   &_active {
     font-weight: 700;
   }
 
+  &::after {
+    content: attr(data-hover);
+    position: absolute;
+    bottom: 0;
+    left: -50vw;
+    transform: rotate(180deg);
+    writing-mode: horizontal-tb;
+    font-weight: 700;
+    font-size: 130px;
+    color: $color_white;
+    transition: .45s $cubic-bezier;
+  }
+
   &:hover {
     color: $color_dark;
 
-    & .sidebar__deco-link {
+    &::after {
       left: -2rem;
     }
   }
 
 }
 
-.sidebar__deco-link {
-  position: absolute;
-  bottom: 0;
-  left: -50vw;
-  transform: rotate(180deg);
-  writing-mode: horizontal-tb;
-  font-weight: 700;
-  font-size: 130px;
-  color: $color_white;
-  transition: .45s $cubic-bezier;
-}
-
 .sidebar__lang-button {
+  position: relative;
   transform: rotate(-90deg);
   font-family: $font_main;
   font-weight: 400;
@@ -94,4 +95,23 @@
   line-height: 1;
   text-transform: uppercase;
   letter-spacing: -0.05em;
+  overflow: hidden;
+
+  &:hover .sidebar__lang-text{
+    display: block;
+    transform: translateY(-100%);
+  }
+}
+
+.sidebar__lang-text {
+  position: relative;
+  display: block;
+  transition: .2s linear;
+
+  &::after {
+    content: attr(data-hover);
+    position: absolute;
+    top: 100%;
+    left: 0;
+  }
 }
