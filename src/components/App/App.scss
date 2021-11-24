@@ -10,9 +10,10 @@ $cursor_hover: url('../../images/cursor/cursor-hover.svg') 10 10, pointer;
 
 
 .app {
+  position: relative;
   margin: 0 auto;
   min-width: 320px;
-  // max-width: 1920px;
+  max-width: 1920px;
   box-sizing: border-box;
   background-color: $color_dark;
   font-family: $font_main;
@@ -34,9 +35,19 @@ $cursor_hover: url('../../images/cursor/cursor-hover.svg') 10 10, pointer;
   transition: .2s ease;
 }
 
+.app__button {
+  box-sizing: border-box;
+  padding: 0;
+  border: none;
+  outline: none;
+  background-color: transparent;
+  color: $color_white;
+  transition: .2s ease;
+}
+
 .app__section {
   position: relative;
   min-height: 100vh;
   box-sizing: border-box;
-  padding: 135px 120px;
+  padding: 130px 120px;
 }
