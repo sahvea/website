@@ -1,10 +1,22 @@
+import React from 'react';
 import AnchorLink from 'react-anchor-link-smooth-scroll';
 import NextSectionLink from '../../NextSectionLink/NextSectionLink';
+import { setCounterAnimation } from '../../../utils/counterAnimation';
+
 
 function Lead() {
+  const title = 'Frontend development';
+
+  React.useEffect(() => {
+    const arr = [`${title}`];
+    const element = document.querySelector('.lead__title');
+
+    setCounterAnimation(arr, element, 20000);
+  },[]);
+
   return (
     <section className="lead app__section">
-      <h1 className="lead__title">Frontend development</h1>
+      <h1 className="lead__title">{title}</h1>
       <ul className="lead__list">
         <li className="lead__list-item">
           <AnchorLink href="#about" className="app__link lead__link">
