@@ -29,8 +29,8 @@ function Sidebar() {
             </NavLink>
           </li>
           <li className="sidebar__nav-item">
-            <NavLink to="/contacts" className="app__link sidebar__nav-link" activeClassName="sidebar__nav-link_active" onMouseEnter={handleMouseOver} onMouseLeave={handleMouseOut} >Contacts
-              <span className="sidebar__deco-link">Contacts</span>
+            <NavLink to="/contact" className="app__link sidebar__nav-link" activeClassName="sidebar__nav-link_active" onMouseEnter={handleMouseOver} onMouseLeave={handleMouseOut} >Contact
+              <span className="sidebar__deco-link">Contact</span>
             </NavLink>
           </li>
         </ul>

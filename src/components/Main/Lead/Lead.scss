@@ -89,28 +89,19 @@
 
 
 @keyframes opacOption {
-  0% {
+  0%, 100% {
     opacity: 0;
   }
   50% {
     opacity: 1;
   }
-  100% {
-    opacity: 0;
-  }
 }
 
 @keyframes opacFinal {
-  0% {
+  0%, 100% {
     opacity: 1;
   }
-  10% {
+  10%, 99% {
     opacity: 0;
-  }
-  99% {
-    opacity: 0;
-  }
-  100% {
-    opacity: 1;
   }
 }
