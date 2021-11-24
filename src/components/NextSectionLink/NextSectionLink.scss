@@ -38,5 +38,5 @@
   text-align: center;
   opacity: 0;
   visibility: hidden;
-  transition-duration: .4s;
+  transition: .4s $cubic-bezier;
 }

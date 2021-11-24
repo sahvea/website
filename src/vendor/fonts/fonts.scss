@@ -1,26 +1,14 @@
-@font-face {
-  font-family: 'NotCourierSans';
-  font-style: normal;
-  font-weight: 400;
-  font-display: swap;
-  src: url('NotCourierSans.woff2') format('woff2'),
-       url('NotCourierSans.woff') format('woff');
+@mixin font($family, $weight, $path1, $format1, $path2, $format2, $style: normal) {
+  @font-face {
+    font-family: $family;
+    font-style: $style;
+    font-weight: $weight;
+    font-display: swap;
+    src: url($path1) format($format1),
+         url($path2) format($format2);
+  }
 }
 
-@font-face {
-  font-family: 'NotCourierSans';
-  font-style: normal;
-  font-weight: 700;
-  font-display: swap;
-  src: url('NotCourierSans-Bold.woff2') format('woff2'),
-       url('NotCourierSans-Bold.woff') format('woff');
-}
-
-@font-face {
-  font-family: 'KPProgrammerAlternatesNBP';
-  font-style: normal;
-  font-weight: 400;
-  font-display: swap;
-  src: url('KpProgrammerAlternatesNbp.woff2') format('woff2'),
-       url('KpProgrammerAlternatesNbp.woff') format('woff');
-}
+@include font('NotCourierSans', 400, 'NotCourierSans.woff2', 'woff2', 'NotCourierSans.woff', 'woff');
+@include font('NotCourierSans', 700, 'NotCourierSans-Bold.woff2', 'woff2', 'NotCourierSans-Bold.woff', 'woff');
+@include font('KPProgrammerAlternatesNBP', 400, 'KpProgrammerAlternatesNbp.woff2', 'woff2', 'KpProgrammerAlternatesNbp.woff', 'woff');
