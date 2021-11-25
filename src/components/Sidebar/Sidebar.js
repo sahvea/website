@@ -5,6 +5,9 @@ function Sidebar() {
   const [isLinkHover, setIsLinkHover] = React.useState(false);
 
   const sidebarClassName = `sidebar ${isLinkHover ? 'sidebar_active' : ''}`;
+  const navLinkClassName = ({ isActive }) =>
+    `app__link sidebar__nav-link ${isLinkHover ? 'sidebar__nav-link_hovered' : ''}`
+    + (isActive ? ' sidebar__nav-link_active' : '');
 
   function handleMouseOver() {
     setIsLinkHover(true);
@@ -14,39 +17,43 @@ function Sidebar() {
     setIsLinkHover(false);
   }
 
+  function handleLinkClick() {
+    setIsLinkHover(false);
+  }
+
   return (
     <aside className={sidebarClassName}>
       <nav className="sidebar__navigation">
         <ul className="sidebar__nav-list">
           <li className="sidebar__nav-item">
             <NavLink to="/"
-              className="app__link sidebar__nav-link"
-              activeClassName="sidebar__nav-link_active"
-              data-hover="Homepage"
+              className={navLinkClassName}
               onMouseEnter={handleMouseOver}
               onMouseLeave={handleMouseOut}
+              onClick={handleLinkClick}
+              data-hover="Homepage"
             >
-                Homepage
+              Homepage
             </NavLink>
           </li>
           <li className="sidebar__nav-item">
             <NavLink to="/projects"
-              className="app__link sidebar__nav-link"
-              activeClassName="sidebar__nav-link_active"
-              data-hover="Projects"
+              className={navLinkClassName}
               onMouseEnter={handleMouseOver}
               onMouseLeave={handleMouseOut}
+              onClick={handleLinkClick}
+              data-hover="Projects"
             >
               Projects
             </NavLink>
           </li>
           <li className="sidebar__nav-item">
             <NavLink to="/contact"
-              className="app__link sidebar__nav-link"
-              activeClassName="sidebar__nav-link_active"
-              data-hover="Contact"
+              className={navLinkClassName}
               onMouseEnter={handleMouseOver}
               onMouseLeave={handleMouseOut}
+              onClick={handleLinkClick}
+              data-hover="Contact"
             >
               Contact
             </NavLink>
