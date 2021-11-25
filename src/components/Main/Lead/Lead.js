@@ -19,7 +19,7 @@ function Lead() {
       <h1 className="lead__title">{title}</h1>
       <ul className="lead__list">
         <li className="lead__list-item">
-          <AnchorLink href="#about" className="app__link lead__link">
+          <AnchorLink href="#about" className="app__link app__section-title lead__link">
             <span className="lead__link-option">a#425t @m</span>
             <span className="lead__link-option">A1$8b! j&</span>
             <span className="lead__link-option">\A@64t $$</span>
@@ -30,7 +30,7 @@ function Lead() {
           </AnchorLink>
         </li>
         <li className="lead__list-item">
-          <AnchorLink href="#skills" className="app__link lead__link">
+          <AnchorLink href="#skills" className="app__link app__section-title lead__link">
             <span className="lead__link-option">s&9Lir $rt</span>
             <span className="lead__link-option">8ki\ep 5#2</span>
             <span className="lead__link-option">$p8b!; $$t</span>

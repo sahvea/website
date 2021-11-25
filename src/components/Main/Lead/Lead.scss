@@ -28,7 +28,7 @@
   font-size: 102px;
   line-height: 1;
   text-transform: uppercase;
-  text-shadow: 4px 4px 4px rgba($color_black, .25);
+  text-shadow: 4px 4px 4px rgba($color_dark, .25);
 }
 
 .lead__list {
@@ -52,12 +52,6 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  font-family: $font_main;
-  font-weight: 400;
-  font-size: 44px;
-  line-height: 1;
-  text-transform: uppercase;
-  letter-spacing: -0.05em;
 
   &:hover {
     @for $i from 1 through 6 {

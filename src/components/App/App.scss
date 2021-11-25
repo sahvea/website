@@ -27,14 +27,30 @@ $cubic-bezier: cubic-bezier(0.3, 0.27, 0.07, 1.64);
   cursor: url('../../images/cursor/cursor.svg') 6 6, auto;
 }
 
+.app__section {
+  position: relative;
+  min-height: 100vh;
+  box-sizing: border-box;
+  padding: 130px 120px;
+}
+
+.app__section-title {
+  font-family: $font_main;
+  font-weight: 400;
+  font-size: 44px;
+  line-height: 1;
+  text-transform: uppercase;
+  letter-spacing: -0.05em;
+}
+
 .app__link, .app__button {
   cursor: $cursor_hover;
+  color: $color_white;
+  transition: .2s ease;
 }
 
 .app__link {
-  color: $color_white;
   text-decoration: none;
-  transition: .2s ease;
 }
 
 .app__button {
@@ -43,13 +59,4 @@ $cubic-bezier: cubic-bezier(0.3, 0.27, 0.07, 1.64);
   border: none;
   outline: none;
   background-color: transparent;
-  color: $color_white;
-  transition: .2s ease;
-}
-
-.app__section {
-  position: relative;
-  min-height: 100vh;
-  box-sizing: border-box;
-  padding: 130px 120px;
 }
