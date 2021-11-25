@@ -8,27 +8,30 @@ import Sidebar from '../Sidebar/Sidebar';
 function App() {
   return (
     <>
-      <Routes>
-        <Route path="/"
-          element={
-            <Main />
-          }
-        />
+      <main>
+        <Routes>
+          <Route path="/"
+            element={
+              <Main />
+            }
+            />
 
-        <Route path="/projects"
-          element={
-            <Projects />
-          }
-        />
+          <Route path="/projects"
+            element={
+              <Projects />
+            }
+            />
 
-        <Route path="/contact"
-          element={
-            <Contact />
-          }
-        />
-      </Routes>
+          <Route path="/contact"
+            element={
+              <Contact />
+            }
+            />
+        </Routes>
 
-      <Sidebar />
+        <Sidebar />
+      </main>
+      {/* <Footer /> */}
     </>
   );
 }
