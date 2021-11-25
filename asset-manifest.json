@@ -1,8 +1,8 @@
 {
   "files": {
     "main.css": "https://sahvea.github.io/website/static/css/main.346407fc.chunk.css",
-    "main.js": "https://sahvea.github.io/website/static/js/main.fe66a6fd.chunk.js",
-    "main.js.map": "https://sahvea.github.io/website/static/js/main.fe66a6fd.chunk.js.map",
+    "main.js": "https://sahvea.github.io/website/static/js/main.fdfa83cf.chunk.js",
+    "main.js.map": "https://sahvea.github.io/website/static/js/main.fdfa83cf.chunk.js.map",
     "runtime-main.js": "https://sahvea.github.io/website/static/js/runtime-main.f328a18c.js",
     "runtime-main.js.map": "https://sahvea.github.io/website/static/js/runtime-main.f328a18c.js.map",
     "static/js/2.558cc06b.chunk.js": "https://sahvea.github.io/website/static/js/2.558cc06b.chunk.js",
@@ -18,6 +18,6 @@
     "static/js/runtime-main.f328a18c.js",
     "static/js/2.558cc06b.chunk.js",
     "static/css/main.346407fc.chunk.css",
-    "static/js/main.fe66a6fd.chunk.js"
+    "static/js/main.fdfa83cf.chunk.js"
   ]
 }
