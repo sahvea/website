@@ -19,6 +19,7 @@ $cubic-bezier: cubic-bezier(0.3, 0.27, 0.07, 1.64);
   box-sizing: border-box;
   background-color: $color_dark;
   font-family: $font_main;
+  font-weight: 400;
   color: $color_white;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
@@ -31,16 +32,25 @@ $cubic-bezier: cubic-bezier(0.3, 0.27, 0.07, 1.64);
   position: relative;
   min-height: 100vh;
   box-sizing: border-box;
-  padding: 130px 120px;
+  padding: 12vh 6.25vw;
 }
 
 .app__section-title {
+  margin: 0;
   font-family: $font_main;
   font-weight: 400;
   font-size: 44px;
   line-height: 1;
   text-transform: uppercase;
   letter-spacing: -0.05em;
+}
+
+.app__section-content {
+  margin-top: 12.5vh;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  row-gap: 8.3vh;
+  column-gap: 4.7vw;
 }
 
 .app__link, .app__button {
@@ -59,4 +69,29 @@ $cubic-bezier: cubic-bezier(0.3, 0.27, 0.07, 1.64);
   border: none;
   outline: none;
   background-color: transparent;
+}
+
+.app__animated-element {
+  position: relative;
+  width: min-content;
+  height: min-content;
+  overflow: hidden;
+
+  & > *:first-child {
+    position: relative;
+    display: block;
+    transition: .2s linear;
+
+    &::after {
+      content: attr(data-hover);
+      position: absolute;
+      top: 100%;
+      left: 0;
+    }
+  }
+
+  &:hover > *:first-child {
+    display: block;
+    transform: translateY(-100%);
+  }
 }

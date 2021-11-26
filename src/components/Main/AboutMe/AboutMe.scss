@@ -1,3 +1,94 @@
-.about {
+.about__info {
+  grid-column: 1;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
 
+.about__info-item {
+  margin-bottom: 2.7vh;
+  display: grid;
+  grid-template-columns: 40% 60%;
+}
+
+.about__info-label {
+  margin: 0;
+  font-family: $font_main;
+  font-size: 24px;
+  line-height: 1;
+  text-transform: uppercase;
+}
+
+.about__info-value {
+  margin: 0;
+  font-family: $font_programmer;
+  font-size: 28px;
+  line-height: .85;
+
+  &_type_list {
+    list-style: disc;
+    padding-left: 20px;
+  }
+}
+
+.about__info-education-item {
+  margin-top: 2.7vh;
+
+  &:first-of-type {
+    margin-top: 0;
+  }
+}
+
+.about__education-name {
+  margin: 0;
+}
+
+.about__edecation-duration {
+  margin: .9vh 0 0;
+  font-size: 20px;
+  line-height: 1;
+  color: $color_grey;
+}
+
+.about__edecation-descr {
+  margin: .9vh 0 0;
+  font-size: 24px;
+  line-height: 1;
+  color: $color_grey;
+}
+
+.about__links-list {
+  grid-column: 1;
+  margin: auto 0 0;
+  padding: 0;
+  list-style: none;
+  display: flex;
+}
+
+.about__links-item {
+  padding-left: 40px;
+
+  &:first-of-type {
+    padding-left: 0;
+  }
+}
+
+.about__link {
+  font-family: $font_main;
+  font-size: 24px;
+  line-height: 1;
+  text-transform: uppercase;
+}
+
+.about__text {
+  grid-column: 2;
+  grid-row: 1;
+  padding-right: 2.6vw;
+}
+
+.about__paragraph {
+  margin-bottom: 2.8vh;
+  font-family: $font_programmer;
+  font-size: 24px;
+  line-height: 1;
 }

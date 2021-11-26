@@ -61,7 +61,7 @@ function Sidebar() {
         </ul>
       </nav>
 
-      <button className="app__button sidebar__lang-button" type="button" value="en">
+      <button className="app__button sidebar__lang-button app__animated-element" type="button" value="en">
         <span className="sidebar__lang-text" data-hover="рус">рус</span>
       </button>
     </aside>

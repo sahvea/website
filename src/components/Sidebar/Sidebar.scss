@@ -81,9 +81,6 @@
 }
 
 .sidebar__lang-button {
-  position: relative;
-  width: min-content;
-  height: min-content;
   margin: auto;
   transform: rotate(-90deg);
   font-family: $font_main;
@@ -92,23 +89,4 @@
   line-height: 1;
   text-transform: uppercase;
   letter-spacing: -0.05em;
-  overflow: hidden;
-
-  &:hover .sidebar__lang-text{
-    display: block;
-    transform: translateY(-100%);
-  }
-}
-
-.sidebar__lang-text {
-  position: relative;
-  display: block;
-  transition: .2s linear;
-
-  &::after {
-    content: attr(data-hover);
-    position: absolute;
-    top: 100%;
-    left: 0;
-  }
 }
