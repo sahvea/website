@@ -5,7 +5,7 @@
   height: 100vh;
   width: 120px;
   box-sizing: border-box;
-  padding: 135px 0;
+  padding: 12vh 0;
   background-color: $color_dark;
   border-left: 1px solid rgba($color_grey, .2);
   display: grid;
@@ -46,9 +46,7 @@
   position: relative;
   writing-mode: vertical-rl;
   transform: rotate(180deg);
-  padding: 40px 30px 0;
-  font-family: $font_main;
-  font-weight: 400;
+  padding: 3.7vh 30px 0;
   font-size: 30px;
   line-height: 1;
   text-transform: uppercase;
@@ -61,7 +59,7 @@
     content: attr(data-hover);
     position: absolute;
     bottom: 0;
-    left: -50vw;
+    left: -100vw;
     transform: rotate(180deg);
     padding-right: 20px;
     writing-mode: horizontal-tb;
@@ -83,8 +81,6 @@
 .sidebar__lang-button {
   margin: auto;
   transform: rotate(-90deg);
-  font-family: $font_main;
-  font-weight: 400;
   font-size: 24px;
   line-height: 1;
   text-transform: uppercase;

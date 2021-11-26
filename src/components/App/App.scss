@@ -33,11 +33,11 @@ $cubic-bezier: cubic-bezier(0.3, 0.27, 0.07, 1.64);
   min-height: 100vh;
   box-sizing: border-box;
   padding: 12vh 6.25vw;
+  padding-right: 120px;
 }
 
 .app__section-title {
   margin: 0;
-  font-family: $font_main;
   font-weight: 400;
   font-size: 44px;
   line-height: 1;
