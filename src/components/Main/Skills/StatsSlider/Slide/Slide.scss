@@ -1,5 +1,6 @@
 .slide {
   user-select: none;
+  max-width: 35.2vw;
 }
 
 .slide__title {
@@ -13,9 +14,11 @@
 
 .slide__info {
   margin-top: 2vh;
+  margin-bottom: 0;
 }
 
 .slide__stats {
   display: block;
   margin: 0 auto;
+  max-width: 30vw;
 }

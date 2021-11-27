@@ -12,5 +12,9 @@
   & .carousel-next:before {
     background-image: url('../../../../images/icons/arrow-right.svg');
   }
+
+  & .carousel-item {
+    height: 54vh;
+  }
 }
 
