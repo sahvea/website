@@ -1,0 +1,21 @@
+.slide {
+  user-select: none;
+}
+
+.slide__title {
+  margin: 0;
+  font-family: $font_main;
+  font-weight: 400;
+  font-size: 24px;
+  line-height: 1;
+  text-align: center;
+}
+
+.slide__info {
+  margin-top: 2vh;
+}
+
+.slide__stats {
+  display: block;
+  margin: 0 auto;
+}

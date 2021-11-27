@@ -1,4 +1,5 @@
 import NextSectionLink from '../../NextSectionLink/NextSectionLink';
+import StatsSlider from './StatsSlider/StatsSlider';
 
 function Skills() {
   return (
@@ -7,9 +8,8 @@ function Skills() {
 
       <div className="app__section-content">
 
-        <figure className="skills__statistics">
-          <embed src="https://wakatime.com/share/@sahvea/02511174-7afa-4808-9f72-f583073f3c6d.svg"></embed>
-        </figure>
+
+        <StatsSlider className={'skills__statistics'} />
       </div>
 
       <NextSectionLink anchor={'#about'} up={true} />
