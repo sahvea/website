@@ -1,3 +1,4 @@
+import StarsBg from '../../Deco/StarsBg/StarsBg';
 import NextSectionLink from '../../NextSectionLink/NextSectionLink';
 
 function AboutMe() {
@@ -33,7 +34,7 @@ function AboutMe() {
               <li className="about__info-education-item">
                 <p className="about__education-name">Yandex.Practikum</p>
                 <p className="about__edecation-duration">Jan 2021 - Oct 2021</p>
-                <p className="about__edecation-descr">Web Developer, course</p>
+                <p className="about__edecation-descr">Web Development professional training course</p>
               </li>
               <li className="about__info-education-item">
                 <p className="about__education-name">Immanuel Kant Baltic Federal University</p>
@@ -63,8 +64,8 @@ function AboutMe() {
         </div>
       </div>
 
-
       <NextSectionLink anchor={'#skills'} />
+      <StarsBg />
     </section>
   );
 }

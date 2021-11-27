@@ -6,7 +6,7 @@ function Skills() {
       <div className="app__section-content">
 
         <figure className="skills__statistics">
-          <embed src="https://wakatime.com/share/@sahvea/6ef395c9-1def-452f-92b8-ced06f973189.svg"></embed>
+          <embed src="https://wakatime.com/share/@sahvea/02511174-7afa-4808-9f72-f583073f3c6d.svg"></embed>
         </figure>
       </div>
 
