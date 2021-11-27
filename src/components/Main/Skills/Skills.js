@@ -1,3 +1,5 @@
+import NextSectionLink from '../../NextSectionLink/NextSectionLink';
+
 function Skills() {
   return (
     <section className="skills app__section" id="skills">
@@ -10,6 +12,7 @@ function Skills() {
         </figure>
       </div>
 
+      <NextSectionLink anchor={'#about'} up={true} />
     </section>
   );
 }

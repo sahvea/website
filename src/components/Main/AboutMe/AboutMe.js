@@ -64,6 +64,7 @@ function AboutMe() {
         </div>
       </div>
 
+      <NextSectionLink anchor={'#lead'} up={true} />
       <NextSectionLink anchor={'#skills'} />
       <StarsBg />
     </section>

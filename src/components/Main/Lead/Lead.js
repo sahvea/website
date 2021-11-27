@@ -15,7 +15,7 @@ function Lead() {
   },[]);
 
   return (
-    <section className="lead app__section">
+    <section className="lead app__section" id="lead">
       <h1 className="lead__title">{title}</h1>
       <ul className="lead__list">
         <li className="lead__list-item">
