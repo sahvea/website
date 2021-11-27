@@ -1,6 +1,6 @@
 {
   "files": {
-    "main.css": "https://sahvea.github.io/website/static/css/main.3b73ba8d.chunk.css",
+    "main.css": "https://sahvea.github.io/website/static/css/main.8fa30da8.chunk.css",
     "main.js": "https://sahvea.github.io/website/static/js/main.486d4f5d.chunk.js",
     "main.js.map": "https://sahvea.github.io/website/static/js/main.486d4f5d.chunk.js.map",
     "runtime-main.js": "https://sahvea.github.io/website/static/js/runtime-main.616176ab.js",
@@ -12,7 +12,7 @@
     "static/js/3.ce057902.chunk.js.map": "https://sahvea.github.io/website/static/js/3.ce057902.chunk.js.map",
     "index.html": "https://sahvea.github.io/website/index.html",
     "static/css/2.674c27c3.chunk.css.map": "https://sahvea.github.io/website/static/css/2.674c27c3.chunk.css.map",
-    "static/css/main.3b73ba8d.chunk.css.map": "https://sahvea.github.io/website/static/css/main.3b73ba8d.chunk.css.map",
+    "static/css/main.8fa30da8.chunk.css.map": "https://sahvea.github.io/website/static/css/main.8fa30da8.chunk.css.map",
     "static/js/2.ed27cb8e.chunk.js.LICENSE.txt": "https://sahvea.github.io/website/static/js/2.ed27cb8e.chunk.js.LICENSE.txt",
     "static/media/index.scss": "https://sahvea.github.io/website/static/media/cursor.c59cbe5c.svg"
   },
@@ -20,7 +20,7 @@
     "static/js/runtime-main.616176ab.js",
     "static/css/2.674c27c3.chunk.css",
     "static/js/2.ed27cb8e.chunk.js",
-    "static/css/main.3b73ba8d.chunk.css",
+    "static/css/main.8fa30da8.chunk.css",
     "static/js/main.486d4f5d.chunk.js"
   ]
 }
