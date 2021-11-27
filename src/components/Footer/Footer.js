@@ -1,7 +1,10 @@
+import { currentYear } from '../../utils/utils';
+
+
 function Footer() {
   return (
     <footer className="footer">
-      <p className="footer__copyright">&copy; 2021 sahvea</p>
+      <p className="footer__copyright">&copy; {currentYear} sahvea</p>
     </footer>
   );
 }

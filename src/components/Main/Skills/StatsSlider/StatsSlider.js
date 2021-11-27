@@ -13,7 +13,7 @@ function StatsSlider(props) {
     <Slider { ...settings }>
 
       <Slide title={'Languages over all time (in percentage)'}>
-        <embed className="slide__stats" src="https://wakatime.com/share/@sahvea/02511174-7afa-4808-9f72-f583073f3c6d.svg"></embed>
+        <embed className="slide__stats" src="https://wakatime.com/share/@sahvea/72658fda-26bb-4c47-8980-dbc7915eeda0.svg"></embed>
       </Slide>
       <Slide title={'Languages over all time (in hours)'}>
         <embed className="slide__stats" src="https://github-readme-stats.vercel.app/api/wakatime?username=sahvea&hide_title=true&hide_border=true&theme=calm&bg_color=21212100&text_color=ffffffb0"></embed>

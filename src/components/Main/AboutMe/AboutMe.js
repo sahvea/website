@@ -1,5 +1,6 @@
 import StarsBg from '../../Deco/StarsBg/StarsBg';
 import NextSectionLink from '../../NextSectionLink/NextSectionLink';
+import { myAge } from '../../../utils/utils';
 
 function AboutMe() {
   return (
@@ -14,7 +15,7 @@ function AboutMe() {
           </li>
           <li className="about__info-item">
             <p className="about__info-label">Age:</p>
-            <p className="about__info-value">24</p>
+            <p className="about__info-value">{myAge}</p>
           </li>
           <li className="about__info-item">
             <p className="about__info-label">Country:</p>
