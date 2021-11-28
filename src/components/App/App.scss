@@ -28,6 +28,10 @@ $cubic-bezier: cubic-bezier(0.3, 0.27, 0.07, 1.64);
   cursor: url('../../images/cursor/cursor.svg') 6 6, auto;
 }
 
+html,body {
+  margin: 0;
+}
+
 .app__section {
   position: relative;
   min-height: 100vh;
