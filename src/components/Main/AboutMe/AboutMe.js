@@ -8,30 +8,31 @@ function AboutMe() {
       <h2 className="app__section-title">/About me</h2>
 
       <div className="app__section-content">
-        <ul className="about__info">
-          <li className="about__info-item">
-            <p className="about__info-label">Name:</p>
-            <p className="about__info-value">Sophie Milash</p>
+
+        <ul className="info about__info">
+          <li className="info__item">
+            <p className="info__label">Name:</p>
+            <p className="info__value">Sophie Milash</p>
           </li>
-          <li className="about__info-item">
-            <p className="about__info-label">Age:</p>
-            <p className="about__info-value">{myAge}</p>
+          <li className="info__item">
+            <p className="info__label">Age:</p>
+            <p className="info__value">{myAge}</p>
           </li>
-          <li className="about__info-item">
-            <p className="about__info-label">Country:</p>
-            <p className="about__info-value">Russia</p>
+          <li className="info__item">
+            <p className="info__label">Country:</p>
+            <p className="info__value">Russia</p>
           </li>
-          <li className="about__info-item">
-            <p className="about__info-label">City:</p>
-            <p className="about__info-value">Kaliningrad</p>
+          <li className="info__item">
+            <p className="info__label">City:</p>
+            <p className="info__value">Kaliningrad</p>
           </li>
-          <li className="about__info-item">
-            <p className="about__info-label">Specialization:</p>
-            <p className="about__info-value">Frontend developer</p>
+          <li className="info__item">
+            <p className="info__label">Specialization:</p>
+            <p className="info__value">Frontend developer</p>
           </li>
-          <li className="about__info-item">
-            <p className="about__info-label">Education:</p>
-            <ul className="about__info-value about__info-value_type_list">
+          <li className="info__item">
+            <p className="info__label">Education:</p>
+            <ul className="info__value info__value_type_list">
               <li className="about__info-education-item">
                 <p className="about__education-name">Yandex.Practikum</p>
                 <p className="about__edecation-duration">Jan 2021 - Oct 2021</p>

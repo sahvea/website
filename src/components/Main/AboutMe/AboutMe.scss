@@ -1,17 +1,20 @@
 .about__info {
   grid-column: 1;
+}
+
+.info {
   margin: 0;
   padding: 0;
   list-style: none;
 }
 
-.about__info-item {
+.info__item {
   margin-bottom: 2.7vh;
   display: grid;
   grid-template-columns: 40% 60%;
 }
 
-.about__info-label {
+.info__label {
   margin: 0;
   font-family: $font_main;
   font-size: 24px;
@@ -19,7 +22,7 @@
   text-transform: uppercase;
 }
 
-.about__info-value {
+.info__value {
   margin: 0;
   font-family: $font_programmer;
   font-size: 28px;

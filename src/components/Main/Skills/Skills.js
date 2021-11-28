@@ -8,73 +8,79 @@ function Skills() {
 
       <div className="app__section-content">
 
-        <ol className="skills__list">
-          <li className="skills__list-item" data-number="0">
-            <h3 className="skills__group-title">Core technologies</h3>
-            <ul className="skills__group">
-              <li className="skills__group-item">
-                <p className="skills__skill">JavaScript</p>
-              </li>
-              <li className="skills__group-item">
-                <p className="skills__skill">NODE.JS</p>
-              </li>
-              <li className="skills__group-item">
-                <p className="skills__skill">HTML</p>
-              </li>
-              <li className="skills__group-item">
-                <p className="skills__skill">CSS</p>
-              </li>
-            </ul>
+        <ul className="info">
+          <li className="info__item">
+            <p className="info__label">Core technologies:</p>
+            <div className="info__value info__value_type_list">
+              <ul className="skills__list">
+                <li className="skills__item">
+                  <p className="skills__name">JavaScript</p>
+                </li>
+                <li className="skills__item">
+                  <p className="skills__name">Node.js</p>
+                </li>
+                <li className="skills__item">
+                  <p className="skills__name">HTML</p>
+                </li>
+                <li className="skills__item">
+                  <p className="skills__name">CSS</p>
+                </li>
+              </ul>
+            </div>
           </li>
-
-          <li className="skills__list-item" data-number="1">
-            <h3 className="skills__group-title">Frameworks / libraries</h3>
-            <ul className="skills__group">
-              <li className="skills__group-item">
-                <p className="skills__skill">React</p>
-              </li>
-              <li className="skills__group-item">
-                <p className="skills__skill">React NAtive</p>
-              </li>
-              <li className="skills__group-item">
-                <p className="skills__skill">Express.js</p>
-              </li>
-            </ul>
+          <li className="info__item">
+            <p className="info__label">Frameworks / libraries:</p>
+            <div className="info__value info__value_type_list">
+              <ul className="skills__list">
+                <li className="skills__item">
+                  <p className="skills__name">React</p>
+                </li>
+                <li className="skills__item">
+                  <p className="skills__name">React Native</p>
+                </li>
+                <li className="skills__item">
+                  <p className="skills__name">Express.js</p>
+                </li>
+              </ul>
+            </div>
           </li>
-
-          <li className="skills__list-item" data-number="2">
-            <h3 className="skills__group-title">Preprocessors</h3>
-            <ul className="skills__group">
-              <li className="skills__group-item">
-                <p className="skills__skill">SASS/SCSS</p>
-              </li>
-              <li className="skills__group-item">
-                <p className="skills__skill">Pug</p>
-              </li>
-            </ul>
+          <li className="info__item">
+            <p className="info__label">Preprocessors:</p>
+            <div className="info__value info__value_type_list">
+              <ul className="skills__list">
+                <li className="skills__item">
+                  <p className="skills__name">SASS/SCSS</p>
+                </li>
+                <li className="skills__item">
+                  <p className="skills__name">Pug</p>
+                </li>
+              </ul>
+            </div>
           </li>
-
-          <li className="skills__list-item" data-number="3">
-            <h3 className="skills__group-title">Module bundlers</h3>
-            <ul className="skills__group">
-              <li className="skills__group-item">
-                <p className="skills__skill">Webpack</p>
-              </li>
-              <li className="skills__group-item">
-                <p className="skills__skill">Gulp</p>
-              </li>
-            </ul>
+          <li className="info__item">
+            <p className="info__label">Module bundlers:</p>
+            <div className="info__value info__value_type_list">
+              <ul className="skills__list">
+                <li className="skills__item">
+                  <p className="skills__name">Webpack</p>
+                </li>
+                <li className="skills__item">
+                  <p className="skills__name">Gulp</p>
+                </li>
+              </ul>
+            </div>
           </li>
-
-          <li className="skills__list-item" data-number="4">
-            <h3 className="skills__group-title">Databases</h3>
-            <ul className="skills__group">
-              <li className="skills__group-item">
-                <p className="skills__skill">MongoDB</p>
-              </li>
-            </ul>
+          <li className="info__item">
+            <p className="info__label">Databases:</p>
+            <div className="info__value info__value_type_list">
+              <ul className="skills__list">
+                <li className="skills__item">
+                  <p className="skills__name">MongoDB</p>
+                </li>
+              </ul>
+            </div>
           </li>
-        </ol>
+        </ul>
 
 
         <StatsSlider className={'skills__statistics'} />
