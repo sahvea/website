@@ -5,6 +5,7 @@ import { translations } from '../../utils/translations';
 import Contact from '../Contact/Contact';
 import Footer from '../Footer/Footer';
 import Main from '../Main/Main';
+import NotFound from '../NotFound/NotFound';
 import Projects from '../Projects/Projects';
 import Sidebar from '../Sidebar/Sidebar';
 
@@ -15,26 +16,25 @@ function App() {
     document.documentElement.lang = lang;
   }, [lang]);
 
+
   return (
     <TranslationContext.Provider value={translations[lang]}>
       <main>
         <Routes>
           <Route path="/"
-            element={
-              <Main />
-            }
+            element={ <Main /> }
           />
 
           <Route path="/projects"
-            element={
-              <Projects />
-            }
+            element={ <Projects /> }
           />
 
           <Route path="/contact"
-            element={
-              <Contact />
-            }
+            element={ <Contact /> }
+          />
+
+          <Route path="*"
+            element={ <NotFound /> }
           />
         </Routes>
 

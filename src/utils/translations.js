@@ -87,6 +87,11 @@ export const translations = {
         activity30: 'Coding activity over last 30 days',
       },
     },
+
+    notFound: {
+      message: 'Page not found',
+      link: 'Return',
+    },
   },
 
   ru: {
@@ -172,6 +177,11 @@ export const translations = {
         allHours: 'Языки за все время (в часах)',
         activity30: 'Активность за последние 30 дней',
       },
+    },
+
+    notFound: {
+      message: 'Страница не найдена',
+      link: 'На главную',
     },
   },
 };

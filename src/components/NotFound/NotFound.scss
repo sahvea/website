@@ -1,0 +1,66 @@
+.not-found {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.not-found__error {
+  position: relative;
+  margin: 10vh 0;
+  font-size: 220px;
+  line-height: 1;
+
+  &::after {
+    content: '';
+    position: absolute;
+    top: -98px;
+    right: 62px;
+    width: 180px;
+    height: 180px;
+    background-image: url('../../images/icons/gear.svg');
+    background-position: center;
+    background-size: contain;
+    background-repeat: no-repeat;
+    transition: .3s ease;
+    animation: rotate 5s linear infinite;
+    animation-direction: reverse;
+  }
+}
+
+.not-found__gear-img {
+  display: inline-block;
+  width: 200px;
+  height: auto;
+  margin-right: 60px;
+  transition: .3s ease;
+  animation: rotate 5s linear infinite;
+}
+
+.not-found__message {
+  margin: 0;
+  font-size: 30px;
+  line-height: 1;
+}
+
+.not-found__return {
+  margin-top: 3vh;
+  padding-bottom: 5px;
+  border-bottom: 1px solid $color_white;
+  font-size: 18px;
+  line-height: 1;
+  text-transform: uppercase;
+
+  &:hover {
+    border-color: transparent;
+  }
+}
+
+@keyframes rotate {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
