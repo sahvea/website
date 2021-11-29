@@ -9,10 +9,9 @@ import Projects from '../Projects/Projects';
 import Sidebar from '../Sidebar/Sidebar';
 
 function App() {
-  const [lang, setLang] = React.useState('ru');
+  const [lang, setLang] = React.useState('en');
 
   React.useEffect(() => {
-
     document.documentElement.lang = lang;
   }, [lang]);
 

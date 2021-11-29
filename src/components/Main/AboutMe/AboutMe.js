@@ -1,5 +1,6 @@
 import React from 'react';
 import { TranslationContext } from '../../../contexts/translationContext';
+import { linksArray } from '../../../utils/constants';
 import StarsBg from '../../Deco/StarsBg/StarsBg';
 import NextSectionLink from '../../NextSectionLink/NextSectionLink';
 
@@ -51,15 +52,13 @@ function AboutMe() {
         </ul>
 
         <ul className="about__links-list">
-          <li className="about__links-item app__animated-element">
-            <a href="https://github.com/sahvea" className="app__link about__link" target="_blank" rel="noreferrer" data-hover="/GitHub">/GitHub</a>
-          </li>
-          <li className="about__links-item app__animated-element">
-            <a href="https://t.me/sahvea" className="app__link about__link" target="_blank" rel="noreferrer" data-hover="/Telegram">/Telegram</a>
-          </li>
-          <li className="about__links-item app__animated-element">
-            <a href="https://www.codewars.com/users/sahvea" className="app__link about__link" target="_blank" rel="noreferrer" data-hover="/Codewars">/Codewars</a>
-          </li>
+          {
+            linksArray.map((item, index) => (
+              <li className="about__links-item app__animated-element" key={index} >
+                <a href={item.link} className="app__link about__link" target="_blank" rel="noreferrer" data-hover={item.name} >{item.name}</a>
+              </li>
+            ))
+          }
         </ul>
 
         <div className="about__text">

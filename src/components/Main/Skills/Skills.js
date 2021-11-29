@@ -1,5 +1,6 @@
 import React from 'react';
 import { TranslationContext } from '../../../contexts/translationContext';
+import { skillsArray } from '../../../utils/constants';
 import NextSectionLink from '../../NextSectionLink/NextSectionLink';
 import StatsSlider from './StatsSlider/StatsSlider';
 
@@ -18,18 +19,13 @@ function Skills() {
             <p className="info__label">{translation.skills.core}</p>
             <div className="info__value info__value_type_list">
               <ul className="skills__list">
-                <li className="skills__item">
-                  <p className="skills__name">JavaScript</p>
-                </li>
-                <li className="skills__item">
-                  <p className="skills__name">Node.js</p>
-                </li>
-                <li className="skills__item">
-                  <p className="skills__name">HTML</p>
-                </li>
-                <li className="skills__item">
-                  <p className="skills__name">CSS</p>
-                </li>
+                {
+                  skillsArray[0].map((item, index) => (
+                    <li className="skills__item" key={index}>
+                      <p className="skills__name">{item.name}</p>
+                    </li>
+                  ))
+                }
               </ul>
             </div>
           </li>
@@ -37,15 +33,13 @@ function Skills() {
             <p className="info__label">{translation.skills.frameworks}</p>
             <div className="info__value info__value_type_list">
               <ul className="skills__list">
-                <li className="skills__item">
-                  <p className="skills__name">React</p>
-                </li>
-                <li className="skills__item">
-                  <p className="skills__name">React Native</p>
-                </li>
-                <li className="skills__item">
-                  <p className="skills__name">Express.js</p>
-                </li>
+                {
+                  skillsArray[1].map((item, index) => (
+                    <li className="skills__item" key={index}>
+                      <p className="skills__name">{item.name}</p>
+                    </li>
+                  ))
+                }
               </ul>
             </div>
           </li>
@@ -53,12 +47,13 @@ function Skills() {
             <p className="info__label">{translation.skills.preprocessors}</p>
             <div className="info__value info__value_type_list">
               <ul className="skills__list">
-                <li className="skills__item">
-                  <p className="skills__name">SASS/SCSS</p>
-                </li>
-                <li className="skills__item">
-                  <p className="skills__name">Pug</p>
-                </li>
+                {
+                  skillsArray[2].map((item, index) => (
+                    <li className="skills__item" key={index}>
+                      <p className="skills__name">{item.name}</p>
+                    </li>
+                  ))
+                }
               </ul>
             </div>
           </li>
@@ -66,12 +61,13 @@ function Skills() {
             <p className="info__label">{translation.skills.bundlers}</p>
             <div className="info__value info__value_type_list">
               <ul className="skills__list">
-                <li className="skills__item">
-                  <p className="skills__name">Webpack</p>
-                </li>
-                <li className="skills__item">
-                  <p className="skills__name">Gulp</p>
-                </li>
+                {
+                  skillsArray[3].map((item, index) => (
+                    <li className="skills__item" key={index}>
+                      <p className="skills__name">{item.name}</p>
+                    </li>
+                  ))
+                }
               </ul>
             </div>
           </li>
@@ -79,9 +75,13 @@ function Skills() {
             <p className="info__label">{translation.skills.databases}</p>
             <div className="info__value info__value_type_list">
               <ul className="skills__list">
-                <li className="skills__item">
-                  <p className="skills__name">MongoDB</p>
-                </li>
+                {
+                  skillsArray[4].map((item, index) => (
+                    <li className="skills__item" key={index}>
+                      <p className="skills__name">{item.name}</p>
+                    </li>
+                  ))
+                }
               </ul>
             </div>
           </li>
