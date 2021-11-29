@@ -1,7 +1,9 @@
 import React from 'react';
+import { TranslationContext } from '../../contexts/translationContext';
 import { NavLink } from 'react-router-dom';
 
-function Sidebar() {
+function Sidebar(props) {
+  const translation = React.useContext(TranslationContext);
   const [isLinkHover, setIsLinkHover] = React.useState(false);
 
   const sidebarClassName = `sidebar ${isLinkHover ? 'sidebar_active' : ''}`;
@@ -21,6 +23,18 @@ function Sidebar() {
     setIsLinkHover(false);
   }
 
+  function handleLangChange(e) {
+    const innerText = e.target.innerText.toLowerCase();
+    let lang;
+
+    innerText === 'рус'
+      ? lang = 'ru'
+      : lang = 'en';
+
+    props.onLangClick(lang);
+  }
+
+
   return (
     <aside className={sidebarClassName}>
       <nav className="sidebar__navigation">
@@ -31,9 +45,9 @@ function Sidebar() {
               onMouseEnter={handleMouseOver}
               onMouseLeave={handleMouseOut}
               onClick={handleLinkClick}
-              data-hover="Homepage"
+              data-hover={translation.nav.main}
             >
-              Homepage
+              {translation.nav.main}
             </NavLink>
           </li>
           <li className="sidebar__nav-item">
@@ -42,9 +56,9 @@ function Sidebar() {
               onMouseEnter={handleMouseOver}
               onMouseLeave={handleMouseOut}
               onClick={handleLinkClick}
-              data-hover="Projects"
+              data-hover={translation.nav.projects}
             >
-              Projects
+              {translation.nav.projects}
             </NavLink>
           </li>
           <li className="sidebar__nav-item">
@@ -53,16 +67,22 @@ function Sidebar() {
               onMouseEnter={handleMouseOver}
               onMouseLeave={handleMouseOut}
               onClick={handleLinkClick}
-              data-hover="Contact"
+              data-hover={translation.nav.contact}
             >
-              Contact
+              {translation.nav.contact}
             </NavLink>
           </li>
         </ul>
       </nav>
 
-      <button className="app__button sidebar__lang-button app__animated-element" type="button" value="en">
-        <span className="sidebar__lang-text" data-hover="рус">рус</span>
+      <button className="app__button sidebar__lang-button app__animated-element" type="button">
+        <span
+          className="sidebar__lang-text"
+          data-hover={translation.nav.lang}
+          onClick={handleLangChange}
+        >
+          {translation.nav.lang}
+        </span>
       </button>
     </aside>
   );

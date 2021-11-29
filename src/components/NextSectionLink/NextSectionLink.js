@@ -1,8 +1,11 @@
+import React from 'react';
+import { TranslationContext } from '../../contexts/translationContext';
 import AnchorLink from 'react-anchor-link-smooth-scroll';
 
 function NextSectionLink(props) {
+  const translation = React.useContext(TranslationContext);
   const linkClassName = `anchor-link ${props.up ? 'anchor-link_direction_up' : ''}`;
-  const linkText = `${props.up ? 'scroll up' : 'scroll down'}`;
+  const linkText = props.up ? translation.link.up : translation.link.down;
 
   return (
     <div className={linkClassName}>

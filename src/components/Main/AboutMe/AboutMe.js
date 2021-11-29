@@ -1,47 +1,50 @@
+import React from 'react';
+import { TranslationContext } from '../../../contexts/translationContext';
 import StarsBg from '../../Deco/StarsBg/StarsBg';
 import NextSectionLink from '../../NextSectionLink/NextSectionLink';
-import { myAge } from '../../../utils/utils';
 
 function AboutMe() {
+  const translation = React.useContext(TranslationContext);
+
   return (
     <section className="about app__section" id="about">
-      <h2 className="app__section-title">/About me</h2>
+      <h2 className="app__section-title">{translation.lead.about.final}</h2>
 
       <div className="app__section-content">
 
         <ul className="info about__info">
           <li className="info__item">
-            <p className="info__label">Name:</p>
-            <p className="info__value">Sophie Milash</p>
+            <p className="info__label">{translation.about.name.label}</p>
+            <p className="info__value">{translation.about.name.value}</p>
           </li>
           <li className="info__item">
-            <p className="info__label">Age:</p>
-            <p className="info__value">{myAge}</p>
+            <p className="info__label">{translation.about.age.label}</p>
+            <p className="info__value">{translation.about.age.value}</p>
           </li>
           <li className="info__item">
-            <p className="info__label">Country:</p>
-            <p className="info__value">Russia</p>
+            <p className="info__label">{translation.about.country.label}</p>
+            <p className="info__value">{translation.about.country.value}</p>
           </li>
           <li className="info__item">
-            <p className="info__label">City:</p>
-            <p className="info__value">Kaliningrad</p>
+            <p className="info__label">{translation.about.city.label}</p>
+            <p className="info__value">{translation.about.city.value}</p>
           </li>
           <li className="info__item">
-            <p className="info__label">Specialization:</p>
-            <p className="info__value">Frontend developer</p>
+            <p className="info__label">{translation.about.specialization.label}</p>
+            <p className="info__value">{translation.about.specialization.value}</p>
           </li>
           <li className="info__item">
-            <p className="info__label">Education:</p>
+            <p className="info__label">{translation.about.education.label}</p>
             <ul className="info__value info__value_type_list">
               <li className="about__info-education-item">
-                <p className="about__education-name">Yandex.Practikum</p>
-                <p className="about__edecation-duration">Jan 2021 - Oct 2021</p>
-                <p className="about__edecation-descr">Web Development professional training course</p>
+                <p className="about__education-name">{translation.about.education.value.practikum.name}</p>
+                <p className="about__edecation-duration">{translation.about.education.value.practikum.dates}</p>
+                <p className="about__edecation-descr">{translation.about.education.value.practikum.descr}</p>
               </li>
               <li className="about__info-education-item">
-                <p className="about__education-name">Immanuel Kant Baltic Federal University</p>
-                <p className="about__edecation-duration">Sep 2015 - Jun 2019</p>
-                <p className="about__edecation-descr">Linguistics and Intercultural Communication, bachelor</p>
+                <p className="about__education-name">{translation.about.education.value.kant.name}</p>
+                <p className="about__edecation-duration">{translation.about.education.value.kant.dates}</p>
+                <p className="about__edecation-descr">{translation.about.education.value.kant.descr}</p>
               </li>
             </ul>
           </li>

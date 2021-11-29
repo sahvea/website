@@ -2,7 +2,7 @@ const today = new Date();
 
 export const currentYear = today.getFullYear();
 
-function getAge(birthDateString) {
+export function getAge(birthDateString) {
   const birthDate = new Date(birthDateString);
   let age = today.getFullYear() - birthDate.getFullYear();
   const month = today.getMonth() - birthDate.getMonth();
@@ -12,5 +12,3 @@ function getAge(birthDateString) {
   }
   return age;
 }
-
-export const myAge = getAge('05-16-1997');

@@ -1,16 +1,21 @@
+import React from 'react';
+import { TranslationContext } from '../../../contexts/translationContext';
 import NextSectionLink from '../../NextSectionLink/NextSectionLink';
 import StatsSlider from './StatsSlider/StatsSlider';
 
 function Skills() {
+  const translation = React.useContext(TranslationContext);
+
+
   return (
     <section className="skills app__section" id="skills">
-      <h2 className="app__section-title">/Skill set</h2>
+      <h2 className="app__section-title">{translation.lead.skills.final}</h2>
 
       <div className="app__section-content">
 
         <ul className="info">
           <li className="info__item">
-            <p className="info__label">Core technologies:</p>
+            <p className="info__label">{translation.skills.core}</p>
             <div className="info__value info__value_type_list">
               <ul className="skills__list">
                 <li className="skills__item">
@@ -29,7 +34,7 @@ function Skills() {
             </div>
           </li>
           <li className="info__item">
-            <p className="info__label">Frameworks / libraries:</p>
+            <p className="info__label">{translation.skills.frameworks}</p>
             <div className="info__value info__value_type_list">
               <ul className="skills__list">
                 <li className="skills__item">
@@ -45,7 +50,7 @@ function Skills() {
             </div>
           </li>
           <li className="info__item">
-            <p className="info__label">Preprocessors:</p>
+            <p className="info__label">{translation.skills.preprocessors}</p>
             <div className="info__value info__value_type_list">
               <ul className="skills__list">
                 <li className="skills__item">
@@ -58,7 +63,7 @@ function Skills() {
             </div>
           </li>
           <li className="info__item">
-            <p className="info__label">Module bundlers:</p>
+            <p className="info__label">{translation.skills.bundlers}</p>
             <div className="info__value info__value_type_list">
               <ul className="skills__list">
                 <li className="skills__item">
@@ -71,7 +76,7 @@ function Skills() {
             </div>
           </li>
           <li className="info__item">
-            <p className="info__label">Databases:</p>
+            <p className="info__label">{translation.skills.databases}</p>
             <div className="info__value info__value_type_list">
               <ul className="skills__list">
                 <li className="skills__item">
