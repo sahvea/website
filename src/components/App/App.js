@@ -38,7 +38,7 @@ function App() {
           />
         </Routes>
 
-        <Sidebar onLangClick={setLang} currentLang={lang} />
+        <Sidebar onLangClick={setLang} />
       </main>
       <Footer />
     </TranslationContext.Provider>

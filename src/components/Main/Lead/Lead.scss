@@ -8,6 +8,7 @@
   background-size: cover;
   background-repeat: no-repeat;
   z-index: 1;
+  overflow-x: hidden;
 
   &::before {
     content: '';

@@ -3,6 +3,7 @@ import { TranslationContext } from '../../../contexts/translationContext';
 import AnchorLink from 'react-anchor-link-smooth-scroll';
 import NextSectionLink from '../../NextSectionLink/NextSectionLink';
 import { setCounterAnimation } from '../../../utils/counterAnimation';
+import Flying from '../../Deco/Flying/Flying';
 
 
 function Lead() {
@@ -45,6 +46,7 @@ function Lead() {
       </ul>
 
       <NextSectionLink anchor={'#about'} />
+      <Flying />
     </section>
   );
 }
