@@ -14,6 +14,7 @@ export const translations = {
     link: {
       down: 'scroll down',
       up: 'scroll up',
+      upLink: 'Up',
     },
 
     lead: {
@@ -105,6 +106,7 @@ export const translations = {
     link: {
       down: 'Вниз',
       up: 'Наверх',
+      upLink: 'Наверх',
     },
 
     lead: {

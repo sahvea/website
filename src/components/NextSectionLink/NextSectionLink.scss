@@ -107,6 +107,19 @@
 
 
 @include AtDesktopM {
+  .anchor-link_direction_up {
+
+    & .anchor-link__line {
+      &::after {
+        animation-delay: 3.2s;
+      }
+    }
+
+    & .anchor-link__link {
+      border-radius: 0 0 25px 25px;
+    }
+  }
+
   .anchor-link__line {
     height: 100px;
   }
@@ -115,5 +128,21 @@
     width: 100px;
     height: 145px;
     font-size: 14px;
+    border-radius: 25px 25px 0 0;
+  }
+}
+
+
+@include AtDesktopS {
+  .anchor-link__line {
+    height: 80px;
+  }
+
+  .anchor-link__link {
+    width: 84px;
+    height: 115px;
+    padding: 10px 0;
+    font-size: 12px;
+
   }
 }

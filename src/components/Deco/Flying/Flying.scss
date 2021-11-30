@@ -60,3 +60,29 @@ $bezier: cubic-bezier(0.02, 0.01, 0.31, 1);
     transform: translateX(-100px);
   }
 }
+
+
+@include AtDesktopS {
+  .flying {
+    right: 10%;
+  }
+
+  .flying__item {
+    &::after {
+      width: 6px;
+      height: 6px;
+    }
+  }
+
+  @keyframes flyingAnimation{
+    50% {
+      transform: translateY(-60px);
+    }
+  }
+
+  @keyframes flyingItemAnimation {
+    50% {
+      transform: translateX(-60px);
+    }
+  }
+}

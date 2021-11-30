@@ -112,5 +112,27 @@
   .sidebar__lang-button {
     font-size: 18px;
   }
+}
 
+
+@include AtDesktopS {
+  .sidebar {
+    width: 80px;
+
+    &_active {
+      grid-template-columns: 1fr 80px;
+    }
+  }
+
+  .sidebar__nav-link {
+    font-size: 22px;
+
+    &::after {
+      font-size: 90px;
+    }
+  }
+
+  .sidebar__lang-button {
+    font-size: 16px;
+  }
 }

@@ -4,7 +4,7 @@
 }
 
 .slide__title {
-  margin: 0;
+  margin: 0 auto;
   font-family: $font_main;
   font-weight: 400;
   font-size: 24px;
@@ -27,5 +27,13 @@
 @include AtDesktopM {
   .slide__title {
     font-size: 20px;
+  }
+}
+
+
+@include AtDesktopS {
+  .slide__title {
+    padding: 0 20px;
+    font-size: 18px;
   }
 }

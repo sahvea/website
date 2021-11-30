@@ -97,3 +97,14 @@
     margin-top: 11vh;
   }
 }
+
+
+@include AtDesktopS {
+  .app__section {
+    padding-right: 80px;
+  }
+
+  .app__section-title {
+    font-size: 28px;
+  }
+}

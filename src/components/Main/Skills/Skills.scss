@@ -65,3 +65,9 @@
     font-size: 22px;
   }
 }
+
+@include AtDesktopS {
+  .skills__name {
+    font-size: 18px;
+  }
+}
