@@ -11,3 +11,9 @@
   line-height: 1;
   opacity: .8;
 }
+
+@include AtDesktopS {
+  .footer__copyright {
+    font-size: 14px;
+  }
+}
