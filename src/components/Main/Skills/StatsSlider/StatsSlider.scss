@@ -3,13 +3,17 @@
   & .carousel-arrow {
     cursor: url('../../../../images/cursor/cursor-hover.svg') 10 10, pointer;
     z-index: 2;
+
+    &:active {
+      transform: scale(.9);
+    }
   }
 
-  & .carousel-prev:before {
+  & .carousel-prev::before {
     background-image: url('../../../../images/icons/arrow-left.svg');
   }
 
-  & .carousel-next:before {
+  & .carousel-next::before {
     background-image: url('../../../../images/icons/arrow-right.svg');
   }
 

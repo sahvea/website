@@ -1,0 +1,19 @@
+.up-link {
+  bottom: 30px;
+  width: 40px;
+  height: 40px;
+  background-image: url('../../images/icons/arrow-left.svg');
+  background-position: center;
+  background-size: 20px;
+  background-repeat: no-repeat;
+  transform: translateX(-50%) rotate(90deg);
+  opacity: .8;
+
+  &:hover {
+    transform: translate(-50%, -10%) rotate(90deg);
+  }
+
+  &:active {
+    transform: translate(-50%, -10%) rotate(90deg) scale(.9);
+  }
+}

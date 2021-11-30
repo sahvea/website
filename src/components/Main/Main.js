@@ -1,6 +1,7 @@
 import Lead from './Lead/Lead';
 import AboutMe from './AboutMe/AboutMe';
 import Skills from './Skills/Skills';
+import UpLink from '../UpLink/UpLink';
 
 function Main() {
   return (
@@ -8,6 +9,7 @@ function Main() {
       <Lead />
       <AboutMe />
       <Skills />
+      <UpLink anchor={'#lead'}/>
     </>
   );
 }
