@@ -1,0 +1,30 @@
+// breakpoints
+
+$desktop_m: 1500px;
+$desktop_s: 1220px;
+$tablet: 1023px;
+$mobile: 575px;
+
+@mixin AtDesktopM {
+  @media screen and (max-width: $desktop_m) {
+    @content;
+  }
+}
+
+@mixin AtDesktopS {
+  @media screen and (max-width: $desktop_s) {
+    @content;
+  }
+}
+
+@mixin AtTablet {
+  @media screen and (max-width: $tablet) {
+    @content;
+  }
+}
+
+@mixin AtMobile {
+  @media screen and (max-width: $mobile) {
+    @content;
+  }
+}

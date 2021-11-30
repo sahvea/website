@@ -98,3 +98,14 @@
     opacity: 0;
   }
 }
+
+
+@include AtDesktopM {
+  .lead__title {
+    font-size: 80px;
+  }
+
+  .lead__list-item {
+    margin-left: 50px;
+  }
+}

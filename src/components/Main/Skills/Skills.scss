@@ -54,3 +54,14 @@
   max-width: 35.2vw;
   max-height: 54vh;
 }
+
+
+@include AtDesktopM {
+  .skills__info-item {
+    margin-bottom: 3vh;
+  }
+
+  .skills__name {
+    font-size: 22px;
+  }
+}

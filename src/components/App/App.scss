@@ -1,16 +1,3 @@
-$font_main: 'NotCourierSans', Arial, sans-serif;
-$font_programmer: 'KPProgrammerAlternatesNBP', Arial, sans-serif;
-
-$color_black: #000;
-$color_dark: #212121;
-$color_white: #fff;
-$color_grey: #c4c4c4;
-
-$cursor_hover: url('../../images/cursor/cursor-hover.svg') 10 10, pointer;
-
-$cubic-bezier: cubic-bezier(0.3, 0.27, 0.07, 1.64);
-
-
 .app {
   position: relative;
   margin: 0 auto;
@@ -26,10 +13,6 @@ $cubic-bezier: cubic-bezier(0.3, 0.27, 0.07, 1.64);
   -webkit-text-size-adjust: 100%;
   -moz-text-size-adjust: 100%;
   cursor: url('../../images/cursor/cursor.svg') 6 6, auto;
-}
-
-html,body {
-  margin: 0;
 }
 
 .app__section {
@@ -97,5 +80,20 @@ html,body {
   &:hover > *:first-child {
     display: block;
     transform: translateY(-100%);
+  }
+}
+
+
+@include AtDesktopM {
+  .app__section {
+    padding-right: 90px;
+  }
+
+  .app__section-title {
+    font-size: 34px;
+  }
+
+  .app__section-content {
+    margin-top: 11vh;
   }
 }

@@ -16,7 +16,7 @@
   z-index: 2;
 
   &_active {
-    width: 100vw;
+    min-width: 100vw;
     grid-template-columns: 1fr 120px;
     background: radial-gradient(ellipse at bottom, #2c2c2c 0%, $color_dark 100%);
     border-color: $color_dark;
@@ -74,7 +74,7 @@
     color: transparent;
 
     &::after {
-      left: -2rem;
+      left: -1.7vw;
     }
   }
 }
@@ -86,4 +86,31 @@
   line-height: 1;
   text-transform: uppercase;
   letter-spacing: -0.05em;
+}
+
+
+@include AtDesktopM {
+  .sidebar {
+    width: 90px;
+    grid-template-rows: 1fr 30px;
+
+    &_active {
+      grid-template-columns: 1fr 90px;
+    }
+  }
+
+  .sidebar__nav-link {
+    font-size: 24px;
+    padding-left: 20px;
+    padding-right: 20px;
+
+    &::after {
+      font-size: 106px;
+    }
+  }
+
+  .sidebar__lang-button {
+    font-size: 18px;
+  }
+
 }

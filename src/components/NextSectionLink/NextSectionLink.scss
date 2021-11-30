@@ -104,3 +104,16 @@
     transform: translateY(-2.5px);
   }
 }
+
+
+@include AtDesktopM {
+  .anchor-link__line {
+    height: 100px;
+  }
+
+  .anchor-link__link {
+    width: 100px;
+    height: 145px;
+    font-size: 14px;
+  }
+}

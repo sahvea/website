@@ -15,7 +15,7 @@ function Skills() {
       <div className="app__section-content">
 
         <ul className="info">
-          <li className="info__item">
+          <li className="info__item skills__info-item">
             <p className="info__label">{translation.skills.core}</p>
             <div className="info__value info__value_type_list">
               <ul className="skills__list">
@@ -29,7 +29,7 @@ function Skills() {
               </ul>
             </div>
           </li>
-          <li className="info__item">
+          <li className="info__item skills__info-item">
             <p className="info__label">{translation.skills.frameworks}</p>
             <div className="info__value info__value_type_list">
               <ul className="skills__list">
@@ -43,7 +43,7 @@ function Skills() {
               </ul>
             </div>
           </li>
-          <li className="info__item">
+          <li className="info__item skills__info-item">
             <p className="info__label">{translation.skills.preprocessors}</p>
             <div className="info__value info__value_type_list">
               <ul className="skills__list">
@@ -57,7 +57,7 @@ function Skills() {
               </ul>
             </div>
           </li>
-          <li className="info__item">
+          <li className="info__item skills__info-item">
             <p className="info__label">{translation.skills.bundlers}</p>
             <div className="info__value info__value_type_list">
               <ul className="skills__list">
@@ -71,7 +71,7 @@ function Skills() {
               </ul>
             </div>
           </li>
-          <li className="info__item">
+          <li className="info__item skills__info-item">
             <p className="info__label">{translation.skills.databases}</p>
             <div className="info__value info__value_type_list">
               <ul className="skills__list">

@@ -48,7 +48,7 @@
 
 .about__edecation-duration {
   margin: .9vh 0 0;
-  font-size: 20px;
+  font-size: 18px;
   line-height: 1;
   color: $color_grey;
 }
@@ -94,4 +94,35 @@
   font-family: $font_programmer;
   font-size: 24px;
   line-height: 1;
+}
+
+
+@include AtDesktopM {
+  .info__item {
+    margin-bottom: 2vh;
+  }
+
+  .info__label {
+    font-size: 20px;
+  }
+
+  .info__value {
+    font-size: 22px;
+  }
+
+  .about__edecation-duration {
+    font-size: 16px;
+  }
+
+  .about__edecation-descr {
+    font-size: 20px;
+  }
+
+  .about__link {
+    font-size: 20px;
+  }
+
+  .about__paragraph {
+    font-size: 18px;
+  }
 }

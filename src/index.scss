@@ -1,5 +1,7 @@
 @import './vendor/normalize.scss';
 @import './vendor/fonts/fonts.scss';
+@import './style/mixins.scss';
+@import './style/variables.scss';
 
 @import './components/App/App.scss';
 @import './components/Sidebar/Sidebar.scss';
