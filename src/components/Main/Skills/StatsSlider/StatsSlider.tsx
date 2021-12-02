@@ -3,14 +3,18 @@ import { TranslationContext } from '../../../../contexts/translationContext';
 import Slider from 'infinite-react-carousel';
 import Slide from './Slide/Slide';
 
-function StatsSlider(props) {
+interface Props {
+  className: string;
+}
+
+const StatsSlider: React.FC<Props> = ({ className }) => {
   const translation = React.useContext(TranslationContext);
 
   const settings =  {
     autoplay: true,
     autoplaySpeed: 6000,
     adaptiveHeight: true,
-    className: props.className
+    className: className
   };
 
   return (

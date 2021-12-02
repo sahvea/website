@@ -4,7 +4,7 @@ import { skillsArray } from '../../../utils/constants';
 import NextSectionLink from '../../NextSectionLink/NextSectionLink';
 import StatsSlider from './StatsSlider/StatsSlider';
 
-function Skills() {
+const Skills: React.FC = () => {
   const translation = React.useContext(TranslationContext);
 
 

@@ -1,15 +1,18 @@
-import React from 'react';
+import React, { Dispatch, MouseEvent } from 'react';
 import { TranslationContext } from '../../contexts/translationContext';
 import { NavLink } from 'react-router-dom';
 
-function Sidebar(props) {
-  const translation = React.useContext(TranslationContext);
-  const [isLinkHover, setIsLinkHover] = React.useState(false);
+type Props = {
+  onLangClick: Dispatch<string>;
+}
 
-  const sidebarClassName = `sidebar ${isLinkHover ? 'sidebar_active' : ''}`;
-  const navLinkClassName = ({ isActive }) =>
-    `app__link sidebar__nav-link ${isLinkHover ? 'sidebar__nav-link_hovered' : ''}`
-    + (isActive ? ' sidebar__nav-link_active' : '');
+const Sidebar: React.FC<Props> = ({ onLangClick }) =>{
+  const translation = React.useContext(TranslationContext);
+  const [isLinkHover, setIsLinkHover] = React.useState<boolean>(false);
+
+  const sidebarClassName: string = `sidebar ${isLinkHover ? 'sidebar_active' : ''}`;
+  const navLinkClassName: string = `app__link sidebar__nav-link ${isLinkHover ? 'sidebar__nav-link_hovered' : ''}`;
+  const activeLinkClassName: string = ' sidebar__nav-link_active';
 
   function handleMouseOver() {
     setIsLinkHover(true);
@@ -23,15 +26,15 @@ function Sidebar(props) {
     setIsLinkHover(false);
   }
 
-  function handleLangChange(e) {
-    const innerText = e.target.innerText.toLowerCase();
-    let lang;
+  function handleLangChange(e: MouseEvent<HTMLElement>) {
+    const innerText: string = (e.target as HTMLElement).innerText.toLowerCase();
+    let lang: string;
 
     innerText === 'рус'
       ? lang = 'ru'
       : lang = 'en';
 
-    props.onLangClick(lang);
+    onLangClick(lang);
   }
 
 
@@ -41,7 +44,7 @@ function Sidebar(props) {
         <ul className="sidebar__nav-list">
           <li className="sidebar__nav-item">
             <NavLink to="/"
-              className={navLinkClassName}
+              className={isActive => navLinkClassName + (isActive ? activeLinkClassName : '')}
               onMouseEnter={handleMouseOver}
               onMouseLeave={handleMouseOut}
               onClick={handleLinkClick}
@@ -52,7 +55,7 @@ function Sidebar(props) {
           </li>
           <li className="sidebar__nav-item">
             <NavLink to="/projects"
-              className={navLinkClassName}
+              className={isActive => navLinkClassName + (isActive ? activeLinkClassName : '')}
               onMouseEnter={handleMouseOver}
               onMouseLeave={handleMouseOut}
               onClick={handleLinkClick}
@@ -63,7 +66,7 @@ function Sidebar(props) {
           </li>
           <li className="sidebar__nav-item">
             <NavLink to="/contact"
-              className={navLinkClassName}
+              className={isActive => navLinkClassName + (isActive ? activeLinkClassName : '')}
               onMouseEnter={handleMouseOver}
               onMouseLeave={handleMouseOut}
               onClick={handleLinkClick}

@@ -3,7 +3,7 @@ import { Link } from 'react-router-dom';
 import { TranslationContext } from '../../contexts/translationContext';
 import gearImg from '../../images/icons/gear.svg';
 
-function NotFound() {
+const NotFound: React.FC = () => {
   const translation = React.useContext(TranslationContext);
 
   return (

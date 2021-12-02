@@ -6,9 +6,9 @@ import { setCounterAnimation } from '../../../utils/counterAnimation';
 import Flying from '../../Deco/Flying/Flying';
 
 
-function Lead() {
+const Lead: React.FC = () => {
   const translation = React.useContext(TranslationContext);
-  const title = 'Frontend development';
+  const title: string = 'Frontend development';
 
   React.useEffect(() => {
     const arr = [`${title}`];

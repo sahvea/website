@@ -1,4 +1,4 @@
-function StarsBg() {
+const StarsBg: React.FC = () =>{
   return (
     <div className="deco">
       <div className="stars"></div>

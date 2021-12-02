@@ -10,10 +10,11 @@ import NotFound from '../NotFound/NotFound';
 import Projects from '../Projects/Projects';
 import Sidebar from '../Sidebar/Sidebar';
 
-function App() {
-  const [lang, setLang] = React.useState('en');
-  const [mobResolution, setMobResolution] = React.useState(false);
-  const [windowWidth, setWindowWidth] = React.useState(window.innerWidth);
+const App: React.FC = () => {
+  const [lang, setLang] = React.useState<string>('en');
+  const [mobResolution, setMobResolution] = React.useState<boolean>(false);
+  const [windowWidth, setWindowWidth] = React.useState<number>(window.innerWidth);
+  const providerValue = translations[lang];
 
   function checkWindowWidth() {
     setTimeout(() => setWindowWidth(window.innerWidth), 500);
@@ -36,9 +37,9 @@ function App() {
 
 
   return (
-    <TranslationContext.Provider value={translations[lang]}>
+    <TranslationContext.Provider value={providerValue}>
 
-      { mobResolution && <Header onLangClick={setLang} /> }
+      { mobResolution && <Header /> }
 
       <main>
         <Routes>

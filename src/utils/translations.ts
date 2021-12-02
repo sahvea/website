@@ -1,8 +1,107 @@
 import { getAge } from './utils';
 
-const myAge = getAge('05-16-1997');
+const myAge: number = getAge('05-16-1997');
 
-export const translations = {
+interface oneLanguageTranslations {
+  nav: {
+    main: string,
+    projects: string,
+    contact: string,
+    lang: string,
+  },
+
+  link: {
+    down: string,
+    up: string,
+    upLink: string,
+  },
+
+  lead: {
+    about: {
+      option1: string,
+      option2: string,
+      option3: string,
+      option4: string,
+      option5: string,
+      option6: string,
+      final: string,
+    },
+    skills: {
+      option1: string,
+      option2: string,
+      option3: string,
+      option4: string,
+      option5: string,
+      option6: string,
+      final: string,
+    }
+  },
+
+  about: {
+    name: {
+      label: string,
+      value: string,
+    },
+    age: {
+      label: string,
+      value: number,
+    },
+    country: {
+      label: string,
+      value: string,
+    },
+    city: {
+      label: string,
+      value: string,
+    },
+    specialization: {
+      label: string,
+      value: string,
+    },
+    education: {
+      label: string,
+      value: {
+        practikum: {
+          name: string,
+          dates: string,
+          descr: string,
+        },
+        kant: {
+          name: string,
+          dates: string,
+          descr: string,
+        }
+      }
+    },
+  },
+
+  skills: {
+    core: string,
+    frameworks: string,
+    preprocessors: string,
+    bundlers: string,
+    databases: string,
+    sliderTitles: {
+      allPercentage: string,
+      allHours: string,
+      activity30: string,
+    },
+  },
+
+  notFound: {
+    message: string,
+    link: string,
+  },
+}
+
+export interface AllTranslations {
+  en: oneLanguageTranslations;
+  ru: oneLanguageTranslations;
+}
+
+
+
+export const translations: AllTranslations = {
   en: {
     nav: {
       main: 'Homepage',

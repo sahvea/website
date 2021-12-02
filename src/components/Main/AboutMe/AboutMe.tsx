@@ -4,7 +4,7 @@ import { linksArray } from '../../../utils/constants';
 import StarsBg from '../../Deco/StarsBg/StarsBg';
 import NextSectionLink from '../../NextSectionLink/NextSectionLink';
 
-function AboutMe() {
+const AboutMe: React.FC = () => {
   const translation = React.useContext(TranslationContext);
 
   return (
