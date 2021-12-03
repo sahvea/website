@@ -10,9 +10,29 @@ const Sidebar: React.FC<Props> = ({ onLangClick }) =>{
   const [isLinkHover, setIsLinkHover] = React.useState<boolean>(false);
   const sidebarClassName: string = `sidebar ${isLinkHover ? 'sidebar_active' : ''}`;
 
+
+  function handleMouseOver() {
+    setIsLinkHover(true);
+  }
+
+  function handleMouseOut() {
+    setIsLinkHover(false);
+  }
+
+  function handleLinkClick() {
+    setIsLinkHover(false);
+  }
+
+
   return (
     <aside className={sidebarClassName}>
-      <Navigation className={'sidebar__navigation'} isLinkHover={isLinkHover} onLinkHover={setIsLinkHover} />
+      <Navigation
+        className={'sidebar__navigation'}
+        isLinkHover={isLinkHover}
+        onMouseEnter={handleMouseOver}
+        onMouseLeave={handleMouseOut}
+        onClick={handleLinkClick}
+      />
 
       <LanguageButton className={'sidebar__lang-button'} onLangClick={onLangClick} />
     </aside>

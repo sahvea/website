@@ -69,3 +69,29 @@
     }
   }
 }
+
+
+@include AtTablet {
+  .navigation__list {
+    align-items: flex-end;
+  }
+
+  .navigation__list-item {
+    margin-top: 20px;
+  }
+
+  .navigation__link {
+    writing-mode: horizontal-tb;
+    transform: none;
+    padding: 10px 0 10px 5px;
+    font-size: 30px;
+
+    &::after {
+      content: none;
+    }
+
+    &:active {
+      transform: scale(.95);
+    }
+  }
+}

@@ -1,31 +1,22 @@
-import React, { Dispatch } from 'react';
+import React from 'react';
 import { NavLink } from 'react-router-dom';
 import { TranslationContext } from '../../contexts/translationContext';
 
 interface Props {
   className?: string;
-  isLinkHover: boolean;
-  onLinkHover: Dispatch<boolean>;
+  isLinkHover?: boolean;
+  onMouseEnter?: () => void;
+  onMouseLeave?: () => void;
+  onClick?: () => void;
 }
 
-const Navigation: React.FC<Props> = ({ className, isLinkHover, onLinkHover }) => {
+const Navigation: React.FC<Props> = ({ className, isLinkHover, onMouseEnter, onMouseLeave, onClick }) => {
   const translation = React.useContext(TranslationContext);
 
   const navigationClassName: string = `navigation ${className ? className : ''}`;
   const navLinkClassName: string = `app__link navigation__link ${isLinkHover ? 'navigation__link_hovered' : ''}`;
   const activeLinkClassName: string = ' navigation__link_active';
 
-  function handleMouseOver() {
-    onLinkHover(true);
-  }
-
-  function handleMouseOut() {
-    onLinkHover(false);
-  }
-
-  function handleLinkClick() {
-    onLinkHover(false);
-  }
 
   return (
     <nav className={navigationClassName}>
@@ -33,9 +24,9 @@ const Navigation: React.FC<Props> = ({ className, isLinkHover, onLinkHover }) =>
         <li className="navigation__list-item">
           <NavLink to="/"
             className={isActive => navLinkClassName + (isActive ? activeLinkClassName : '')}
-            onMouseEnter={handleMouseOver}
-            onMouseLeave={handleMouseOut}
-            onClick={handleLinkClick}
+            onMouseEnter={onMouseEnter}
+            onMouseLeave={onMouseLeave}
+            onClick={onClick}
             data-hover={translation.nav.main}
           >
             {translation.nav.main}
@@ -44,9 +35,9 @@ const Navigation: React.FC<Props> = ({ className, isLinkHover, onLinkHover }) =>
         <li className="navigation__list-item">
           <NavLink to="/projects"
             className={isActive => navLinkClassName + (isActive ? activeLinkClassName : '')}
-            onMouseEnter={handleMouseOver}
-            onMouseLeave={handleMouseOut}
-            onClick={handleLinkClick}
+            onMouseEnter={onMouseEnter}
+            onMouseLeave={onMouseLeave}
+            onClick={onClick}
             data-hover={translation.nav.projects}
           >
             {translation.nav.projects}
@@ -55,9 +46,9 @@ const Navigation: React.FC<Props> = ({ className, isLinkHover, onLinkHover }) =>
         <li className="navigation__list-item">
           <NavLink to="/contact"
             className={isActive => navLinkClassName + (isActive ? activeLinkClassName : '')}
-            onMouseEnter={handleMouseOver}
-            onMouseLeave={handleMouseOut}
-            onClick={handleLinkClick}
+            onMouseEnter={onMouseEnter}
+            onMouseLeave={onMouseLeave}
+            onClick={onClick}
             data-hover={translation.nav.contact}
           >
             {translation.nav.contact}

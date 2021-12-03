@@ -1,10 +1,10 @@
 import React from 'react';
-// import Navigation from "../Navigation/Navigation";
+import Navigation from "../Navigation/Navigation";
 import Burger from './Burger/Burger';
 
 const Header: React.FC = () => {
   const [isActive, setIsActive] = React.useState<boolean>(false);
-  const headerClassName = `header ${isActive ? 'header_active' : ''}`;
+  const headerWrapClassName = `header__wrap ${isActive ? 'header__wrap_active' : ''}`;
 
 
   function handleBurgerClick() {
@@ -12,10 +12,14 @@ const Header: React.FC = () => {
   }
 
   return (
-    <header className={headerClassName}>
+    <header className="header">
       <Burger isActive={isActive} onBurgerClick={handleBurgerClick} />
 
-      {/* <Navigation /> */}
+      <div className={headerWrapClassName}>
+
+        { isActive && <Navigation onClick={handleBurgerClick} /> }
+
+      </div>
     </header>
   );
 }
