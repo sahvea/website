@@ -9,6 +9,9 @@
 @import './components/Sidebar/Sidebar.scss';
 @import './components/Navigation/Navigation.scss';
 @import './components/LanguageButton/LanguageButton.scss';
+@import './components/Header/Header.scss';
+@import './components/Header/Burger/Burger.scss';
+@import './components/Footer/Footer.scss';
 
 @import './components/Deco/StarsBg/StarsBg.scss';
 @import './components/Deco/Flying/Flying.scss';
@@ -19,5 +22,4 @@
 @import './components/Main/Skills/Skills.scss';
 @import './components/Main/Skills/StatsSlider/StatsSlider.scss';
 @import './components/Main/Skills/StatsSlider/Slide/Slide.scss';
-@import './components/Footer/Footer.scss';
 @import './components/NotFound/NotFound.scss';
