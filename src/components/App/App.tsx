@@ -14,7 +14,6 @@ const App: React.FC = () => {
   const [lang, setLang] = React.useState<string>('en');
   const [mobResolution, setMobResolution] = React.useState<boolean>(false);
   const [windowWidth, setWindowWidth] = React.useState<number>(window.innerWidth);
-  const providerValue = translations[lang];
 
   function checkWindowWidth() {
     setTimeout(() => setWindowWidth(window.innerWidth), 500);
@@ -37,7 +36,7 @@ const App: React.FC = () => {
 
 
   return (
-    <TranslationContext.Provider value={providerValue}>
+    <TranslationContext.Provider value={translations[lang]}>
 
       { mobResolution && <Header /> }
 

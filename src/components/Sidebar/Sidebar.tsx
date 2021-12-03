@@ -2,7 +2,7 @@ import React, { Dispatch, MouseEvent } from 'react';
 import { TranslationContext } from '../../contexts/translationContext';
 import { NavLink } from 'react-router-dom';
 
-type Props = {
+interface Props {
   onLangClick: Dispatch<string>;
 }
 

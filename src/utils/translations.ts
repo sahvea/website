@@ -1,102 +1,43 @@
 import { getAge } from './utils';
 
-const myAge: number = getAge('05-16-1997');
+const myAge: string = getAge('05-16-1997').toString();
 
-interface oneLanguageTranslations {
-  nav: {
-    main: string,
-    projects: string,
-    contact: string,
-    lang: string,
-  },
+type TranslationStrings = {
+  [key: string]: string;
+}
 
-  link: {
-    down: string,
-    up: string,
-    upLink: string,
-  },
+type TranslationStringsGroup = {
+  [key: string]: TranslationStrings;
+}
 
-  lead: {
-    about: {
-      option1: string,
-      option2: string,
-      option3: string,
-      option4: string,
-      option5: string,
-      option6: string,
-      final: string,
-    },
-    skills: {
-      option1: string,
-      option2: string,
-      option3: string,
-      option4: string,
-      option5: string,
-      option6: string,
-      final: string,
-    }
-  },
-
+export type OneLanguageTranslation = {
+  nav: TranslationStrings;
+  link: TranslationStrings;
+  lead: TranslationStringsGroup;
   about: {
-    name: {
-      label: string,
-      value: string,
-    },
-    age: {
-      label: string,
-      value: number,
-    },
-    country: {
-      label: string,
-      value: string,
-    },
-    city: {
-      label: string,
-      value: string,
-    },
-    specialization: {
-      label: string,
-      value: string,
-    },
+    name: TranslationStrings;
+    age: TranslationStrings;
+    country: TranslationStrings;
+    city: TranslationStrings;
+    specialization: TranslationStrings;
     education: {
-      label: string,
-      value: {
-        practikum: {
-          name: string,
-          dates: string,
-          descr: string,
-        },
-        kant: {
-          name: string,
-          dates: string,
-          descr: string,
-        }
-      }
+      label: string;
+      value: TranslationStringsGroup;
     },
   },
-
   skills: {
-    core: string,
-    frameworks: string,
-    preprocessors: string,
-    bundlers: string,
-    databases: string,
-    sliderTitles: {
-      allPercentage: string,
-      allHours: string,
-      activity30: string,
-    },
+    core: string;
+    frameworks: string;
+    preprocessors: string;
+    bundlers: string;
+    databases: string;
+    sliderTitles: TranslationStrings;
   },
-
-  notFound: {
-    message: string,
-    link: string,
-  },
+  notFound: TranslationStrings;
 }
 
 export interface AllTranslations {
-  en: oneLanguageTranslations;
-  ru: oneLanguageTranslations;
+  [key: string]: OneLanguageTranslation;
 }
 
 
@@ -286,3 +227,96 @@ export const translations: AllTranslations = {
     },
   },
 };
+
+
+export const translationEng: OneLanguageTranslation = {
+  nav: {
+    main: 'Homepage',
+    projects: 'Projects',
+    contact: 'Contact',
+    lang: 'рус',
+  },
+
+  link: {
+    down: 'scroll down',
+    up: 'scroll up',
+    upLink: 'Up',
+  },
+
+  lead: {
+    about: {
+      option1: 'a#425t @m',
+      option2: 'A1$8b! j&',
+      option3: '\\A@64t $$',
+      option4: '/A5d0? t#',
+      option5: 'Ab0$it 9e',
+      option6: '/Abou! ne',
+      final: '/About me',
+    },
+    skills: {
+      option1: 's&9Lir $rt',
+      option2: '8ki\\ep 5#2',
+      option3: '$p8b!; $$t',
+      option4: '/Sm9d? j#y',
+      option5: 'Sk0il5 9el',
+      option6: '/Ski!! $e?',
+      final: '/Skill set',
+    }
+  },
+
+  about: {
+    name: {
+      label: 'Name:',
+      value: 'Sophie Milash',
+    },
+    age: {
+      label: 'Age:',
+      value: myAge,
+    },
+    country: {
+      label: 'Country:',
+      value: 'Russia',
+    },
+    city: {
+      label: 'City:',
+      value: 'Kaliningrad',
+    },
+    specialization: {
+      label: 'Specialization:',
+      value: 'Frontend developer',
+    },
+    education: {
+      label: 'Education:',
+      value: {
+        practikum: {
+          name: 'Yandex.Practikum',
+          dates: 'Jan 2021 - Oct 2021',
+          descr: 'Web Development professional training course',
+        },
+        kant: {
+          name: 'Immanuel Kant Baltic Federal University',
+          dates: 'Sep 2015 - Jun 2019',
+          descr: 'Linguistics and Intercultural Communication, bachelor',
+        }
+      }
+    },
+  },
+
+  skills: {
+    core: 'Core technologies:',
+    frameworks: 'Frameworks / libraries:',
+    preprocessors: 'Preprocessors:',
+    bundlers: 'Module bundlers:',
+    databases: 'Databases:',
+    sliderTitles: {
+      allPercentage: 'Languages over all time (in percentage)',
+      allHours: 'Languages over all time (in hours)',
+      activity30: 'Coding activity over last 30 days',
+    },
+  },
+
+  notFound: {
+    message: 'Page not found',
+    link: 'Return',
+  },
+}
