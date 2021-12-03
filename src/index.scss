@@ -4,12 +4,15 @@
 @import './style/variables.scss';
 
 @import './components/App/App.scss';
-@import './components/Sidebar/Sidebar.scss';
 @import './components/NextSectionLink/NextSectionLink.scss';
 @import './components/UpLink/UpLink.scss';
+@import './components/Sidebar/Sidebar.scss';
+@import './components/Navigation/Navigation.scss';
+@import './components/LanguageButton/LanguageButton.scss';
 
 @import './components/Deco/StarsBg/StarsBg.scss';
 @import './components/Deco/Flying/Flying.scss';
+
 
 @import './components/Main/Lead/Lead.scss';
 @import './components/Main/AboutMe/AboutMe.scss';

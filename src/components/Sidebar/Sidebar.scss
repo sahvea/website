@@ -32,62 +32,6 @@
   }
 }
 
-.sidebar__nav-list {
-  margin: 0;
-  padding: 0;
-  list-style: none;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  align-items: center;
-}
-
-.sidebar__nav-link {
-  display: block;
-  position: relative;
-  writing-mode: vertical-rl;
-  transform: rotate(180deg);
-  padding: 3.7vh 30px 0;
-  font-size: 30px;
-  line-height: 1;
-  text-transform: uppercase;
-
-  &_active {
-    font-weight: 700;
-  }
-
-  &::after {
-    content: attr(data-hover);
-    position: absolute;
-    bottom: 0;
-    left: -100vw;
-    transform: rotate(180deg);
-    padding-right: 20px;
-    writing-mode: horizontal-tb;
-    font-weight: 700;
-    font-size: 130px;
-    color: $color_white;
-    transition: .45s $cubic-bezier;
-  }
-
-  &_hovered:hover {
-    color: transparent;
-
-    &::after {
-      left: -1.7vw;
-    }
-  }
-}
-
-.sidebar__lang-button {
-  margin: auto;
-  transform: rotate(-90deg);
-  font-size: 24px;
-  line-height: 1;
-  text-transform: uppercase;
-  letter-spacing: -0.05em;
-}
-
 
 @include AtDesktopM {
   .sidebar {
@@ -97,20 +41,6 @@
     &_active {
       grid-template-columns: 1fr 90px;
     }
-  }
-
-  .sidebar__nav-link {
-    font-size: 24px;
-    padding-left: 20px;
-    padding-right: 20px;
-
-    &::after {
-      font-size: 106px;
-    }
-  }
-
-  .sidebar__lang-button {
-    font-size: 18px;
   }
 }
 
@@ -122,17 +52,5 @@
     &_active {
       grid-template-columns: 1fr 80px;
     }
-  }
-
-  .sidebar__nav-link {
-    font-size: 22px;
-
-    &::after {
-      font-size: 90px;
-    }
-  }
-
-  .sidebar__lang-button {
-    font-size: 16px;
   }
 }
