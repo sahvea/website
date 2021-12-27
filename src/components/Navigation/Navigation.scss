@@ -74,6 +74,7 @@
 @include AtTablet {
   .navigation__list {
     align-items: flex-end;
+    margin-top: 50px;
   }
 
   .navigation__list-item {

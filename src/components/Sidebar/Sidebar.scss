@@ -3,7 +3,7 @@
   top: 0;
   right: 0;
   height: 100vh;
-  width: 120px;
+  min-width: 120px;
   box-sizing: border-box;
   padding: 12vh 0;
   background-color: $color_dark;
@@ -16,11 +16,16 @@
   z-index: 2;
 
   &_active {
-    min-width: 100vw;
+    min-width: 55vw;
     grid-template-columns: 1fr 120px;
-    background: radial-gradient(ellipse at bottom, #2c2c2c 0%, $color_dark 100%);
+    // background: radial-gradient(ellipse at bottom, #2c2c2c 0%, $color_dark 100%);
+    background: linear-gradient(90deg, rgba($color_black, .6) 21px, transparent 1%) center,
+                linear-gradient(rgba($color_black, .6) 21px, transparent 1%) center,
+                rgba($color_grey, .3);
+    background-size: 22px 22px;
+    background-position: top left;
     border-color: $color_dark;
-    transition: width .3s linear;
+    transition: min-width .2s linear;
 
     & .sidebar__navigation {
       grid-column: 2;
