@@ -2,27 +2,27 @@ import { getAge } from './utils';
 
 const myAge: string = getAge('05-16-1997').toString();
 
-type TranslationStrings = {
+type TTranslationStrings = {
   [key: string]: string;
 }
 
-type TranslationStringsGroup = {
-  [key: string]: TranslationStrings;
+type TTranslationStringsGroup = {
+  [key: string]: TTranslationStrings;
 }
 
-export type OneLanguageTranslation = {
-  nav: TranslationStrings;
-  link: TranslationStrings;
-  lead: TranslationStringsGroup;
+export type TOneLanguageTranslation = {
+  nav: TTranslationStrings;
+  link: TTranslationStrings;
+  lead: TTranslationStringsGroup;
   about: {
-    name: TranslationStrings;
-    age: TranslationStrings;
-    country: TranslationStrings;
-    city: TranslationStrings;
-    specialization: TranslationStrings;
+    name: TTranslationStrings;
+    age: TTranslationStrings;
+    country: TTranslationStrings;
+    city: TTranslationStrings;
+    specialization: TTranslationStrings;
     education: {
       label: string;
-      value: TranslationStringsGroup;
+      value: TTranslationStringsGroup;
     },
   },
   skills: {
@@ -31,18 +31,19 @@ export type OneLanguageTranslation = {
     preprocessors: string;
     bundlers: string;
     databases: string;
-    sliderTitles: TranslationStrings;
+    methodologies: string;
+    sliderTitles: TTranslationStrings;
   },
-  notFound: TranslationStrings;
+  notFound: TTranslationStrings;
 }
 
-export interface AllTranslations {
-  [key: string]: OneLanguageTranslation;
+export type TAllTranslations = {
+  [key: string]: TOneLanguageTranslation;
 }
 
 
 
-export const translations: AllTranslations = {
+export const translations: TAllTranslations = {
   en: {
     nav: {
       main: 'Homepage',
@@ -122,6 +123,7 @@ export const translations: AllTranslations = {
       preprocessors: 'Preprocessors:',
       bundlers: 'Module bundlers:',
       databases: 'Databases:',
+      methodologies: 'Methodologies:',
       sliderTitles: {
         allPercentage: 'Languages over all time (in percentage)',
         allHours: 'Languages over all time (in hours)',
@@ -214,6 +216,7 @@ export const translations: AllTranslations = {
       preprocessors: 'Препроцессоры:',
       bundlers: 'Сборщики модулей:',
       databases: 'Базы данных:',
+      methodologies: 'Методологии:',
       sliderTitles: {
         allPercentage: 'Языки за все время (в процентах)',
         allHours: 'Языки за все время (в часах)',
@@ -228,95 +231,4 @@ export const translations: AllTranslations = {
   },
 };
 
-
-export const translationEng: OneLanguageTranslation = {
-  nav: {
-    main: 'Homepage',
-    projects: 'Projects',
-    contact: 'Contact',
-    lang: 'рус',
-  },
-
-  link: {
-    down: 'scroll down',
-    up: 'scroll up',
-    upLink: 'Up',
-  },
-
-  lead: {
-    about: {
-      option1: 'a#425t @m',
-      option2: 'A1$8b! j&',
-      option3: '\\A@64t $$',
-      option4: '/A5d0? t#',
-      option5: 'Ab0$it 9e',
-      option6: '/Abou! ne',
-      final: '/About me',
-    },
-    skills: {
-      option1: 's&9Lir $rt',
-      option2: '8ki\\ep 5#2',
-      option3: '$p8b!; $$t',
-      option4: '/Sm9d? j#y',
-      option5: 'Sk0il5 9el',
-      option6: '/Ski!! $e?',
-      final: '/Skill set',
-    }
-  },
-
-  about: {
-    name: {
-      label: 'Name:',
-      value: 'Sophie Milash',
-    },
-    age: {
-      label: 'Age:',
-      value: myAge,
-    },
-    country: {
-      label: 'Country:',
-      value: 'Russia',
-    },
-    city: {
-      label: 'City:',
-      value: 'Kaliningrad',
-    },
-    specialization: {
-      label: 'Specialization:',
-      value: 'Frontend developer',
-    },
-    education: {
-      label: 'Education:',
-      value: {
-        practikum: {
-          name: 'Yandex.Practikum',
-          dates: 'Jan 2021 - Oct 2021',
-          descr: 'Web Development professional training course',
-        },
-        kant: {
-          name: 'Immanuel Kant Baltic Federal University',
-          dates: 'Sep 2015 - Jun 2019',
-          descr: 'Linguistics and Intercultural Communication, bachelor',
-        }
-      }
-    },
-  },
-
-  skills: {
-    core: 'Core technologies:',
-    frameworks: 'Frameworks / libraries:',
-    preprocessors: 'Preprocessors:',
-    bundlers: 'Module bundlers:',
-    databases: 'Databases:',
-    sliderTitles: {
-      allPercentage: 'Languages over all time (in percentage)',
-      allHours: 'Languages over all time (in hours)',
-      activity30: 'Coding activity over last 30 days',
-    },
-  },
-
-  notFound: {
-    message: 'Page not found',
-    link: 'Return',
-  },
-}
+// export const translationEng: TOneLanguageTranslation = translations.en;

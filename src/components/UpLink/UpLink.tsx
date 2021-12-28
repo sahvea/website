@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useContext } from 'react';
 import AnchorLink from 'react-anchor-link-smooth-scroll';
 import { TranslationContext } from '../../contexts/translationContext';
 
@@ -7,7 +7,7 @@ interface Props {
 }
 
 const UpLink: React.FC<Props> = ({ anchor }) => {
-  const translation = React.useContext(TranslationContext);
+  const translation = useContext(TranslationContext);
 
   return (
     <AnchorLink href={anchor} className="app__link anchor-link up-link" title={translation.link.upLink} ></AnchorLink>

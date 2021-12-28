@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useContext } from 'react';
 import { TranslationContext } from '../../contexts/translationContext';
 import AnchorLink from 'react-anchor-link-smooth-scroll';
 
@@ -8,7 +8,7 @@ interface Props {
 }
 
 const NextSectionLink: React.FC<Props> = ({ anchor, up }) =>{
-  const translation = React.useContext(TranslationContext);
+  const translation = useContext(TranslationContext);
   const linkClassName: string = `anchor-link ${up ? 'anchor-link_direction_up' : ''}`;
   const linkText: string = up ? translation.link.up : translation.link.down;
 

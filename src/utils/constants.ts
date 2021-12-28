@@ -17,7 +17,10 @@ export const linksArray = [
 export const skillsArray = [
   [ // Core technologies
     {
-      name: 'JavaScript',
+      name: 'JS',
+    },
+    {
+      name: 'TS',
     },
     {
       name: 'Node.js',
@@ -59,6 +62,14 @@ export const skillsArray = [
   [ // Databases
     {
       name: 'MongoDB',
+    },
+  ],
+  [ // Methodologies
+    {
+      name: 'BEM',
+    },
+    {
+      name: 'Atomic Design',
     },
   ],
 ];

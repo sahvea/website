@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useContext, useEffect } from 'react';
 import { TranslationContext } from '../../../contexts/translationContext';
 import AnchorLink from 'react-anchor-link-smooth-scroll';
 import NextSectionLink from '../../NextSectionLink/NextSectionLink';
@@ -7,10 +7,10 @@ import Flying from '../../Deco/Flying/Flying';
 
 
 const Lead: React.FC = () => {
-  const translation = React.useContext(TranslationContext);
+  const translation = useContext(TranslationContext);
   const title: string = 'Frontend development';
 
-  React.useEffect(() => {
+  useEffect(() => {
     const arr = [`${title}`];
     const element = document.querySelector('.lead__title');
 

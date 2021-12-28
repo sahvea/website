@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useContext } from 'react';
 import { NavLink } from 'react-router-dom';
 import { TranslationContext } from '../../contexts/translationContext';
 
@@ -11,7 +11,7 @@ interface Props {
 }
 
 const Navigation: React.FC<Props> = ({ className, isLinkHover, onMouseEnter, onMouseLeave, onClick }) => {
-  const translation = React.useContext(TranslationContext);
+  const translation = useContext(TranslationContext);
 
   const navigationClassName: string = `navigation ${className ? className : ''}`;
   const navLinkClassName: string = `app__link navigation__link ${isLinkHover ? 'navigation__link_hovered' : ''}`;

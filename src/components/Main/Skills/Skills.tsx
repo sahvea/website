@@ -1,11 +1,11 @@
-import React from 'react';
+import React, { useContext } from 'react';
 import { TranslationContext } from '../../../contexts/translationContext';
 import { skillsArray } from '../../../utils/constants';
 import NextSectionLink from '../../NextSectionLink/NextSectionLink';
 import StatsSlider from './StatsSlider/StatsSlider';
 
 const Skills: React.FC = () => {
-  const translation = React.useContext(TranslationContext);
+  const translation = useContext(TranslationContext);
 
 
   return (
@@ -77,6 +77,20 @@ const Skills: React.FC = () => {
               <ul className="skills__list">
                 {
                   skillsArray[4].map((item, index) => (
+                    <li className="skills__item" key={index}>
+                      <p className="skills__name">{item.name}</p>
+                    </li>
+                  ))
+                }
+              </ul>
+            </div>
+          </li>
+          <li className="info__item skills__info-item">
+            <p className="info__label">{translation.skills.methodologies}</p>
+            <div className="info__value info__value_type_list">
+              <ul className="skills__list">
+                {
+                  skillsArray[5].map((item, index) => (
                     <li className="skills__item" key={index}>
                       <p className="skills__name">{item.name}</p>
                     </li>

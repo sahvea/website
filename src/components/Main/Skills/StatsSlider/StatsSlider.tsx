@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useContext } from 'react';
 import { TranslationContext } from '../../../../contexts/translationContext';
 import Slider from 'infinite-react-carousel';
 import Slide from './Slide/Slide';
@@ -8,7 +8,7 @@ interface Props {
 }
 
 const StatsSlider: React.FC<Props> = ({ className }) => {
-  const translation = React.useContext(TranslationContext);
+  const translation = useContext(TranslationContext);
 
   const settings =  {
     autoplay: true,

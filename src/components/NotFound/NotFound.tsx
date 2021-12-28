@@ -1,10 +1,10 @@
-import React from 'react';
+import React, { useContext } from 'react';
 import { Link } from 'react-router-dom';
 import { TranslationContext } from '../../contexts/translationContext';
 import gearImg from '../../images/icons/gear.svg';
 
 const NotFound: React.FC = () => {
-  const translation = React.useContext(TranslationContext);
+  const translation = useContext(TranslationContext);
 
   return (
     <section className="not-found app__section">

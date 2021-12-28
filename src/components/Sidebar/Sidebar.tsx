@@ -1,4 +1,4 @@
-import React, { Dispatch } from 'react';
+import React, { Dispatch, useState } from 'react';
 import LanguageButton from '../LanguageButton/LanguageButton';
 import Navigation from '../Navigation/Navigation';
 
@@ -7,7 +7,7 @@ interface Props {
 }
 
 const Sidebar: React.FC<Props> = ({ onLangClick }) =>{
-  const [isLinkHover, setIsLinkHover] = React.useState<boolean>(false);
+  const [isLinkHover, setIsLinkHover] = useState<boolean>(false);
   const sidebarClassName: string = `sidebar ${isLinkHover ? 'sidebar_active' : ''}`;
 
 

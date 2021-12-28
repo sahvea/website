@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 import { Route, Routes } from 'react-router-dom';
 import { TranslationContext } from '../../contexts/translationContext';
 import { translations } from '../../utils/translations';
@@ -11,26 +11,27 @@ import Projects from '../Projects/Projects';
 import Sidebar from '../Sidebar/Sidebar';
 
 const App: React.FC = () => {
-  const [lang, setLang] = React.useState<string>('en');
-  const [mobResolution, setMobResolution] = React.useState<boolean>(false);
-  const [windowWidth, setWindowWidth] = React.useState<number>(window.innerWidth);
+  const [lang, setLang] = useState<string>('en');
+  const [mobResolution, setMobResolution] = useState<boolean>(false);
+  const [windowWidth, setWindowWidth] = useState<number>(window.innerWidth);
 
   function checkWindowWidth() {
     setTimeout(() => setWindowWidth(window.innerWidth), 500);
   };
 
 
-  React.useEffect(() => {
+  useEffect(() => {
     window.addEventListener('resize', checkWindowWidth);
 
-    windowWidth < 1024
+    windowWidth <= 1023
       ? setMobResolution(true)
       : setMobResolution(false);
 
     return () => window.removeEventListener('resize', checkWindowWidth);
   }, [windowWidth]);
 
-  React.useEffect(() => {
+
+  useEffect(() => {
     document.documentElement.lang = lang;
   }, [lang]);
 

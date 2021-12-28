@@ -1,4 +1,4 @@
 import React from 'react';
-import { OneLanguageTranslation, translationEng } from '../utils/translations';
+import { TOneLanguageTranslation, translations } from '../utils/translations';
 
-export const TranslationContext = React.createContext<OneLanguageTranslation>(translationEng);
+export const TranslationContext = React.createContext<TOneLanguageTranslation>(translations.en);

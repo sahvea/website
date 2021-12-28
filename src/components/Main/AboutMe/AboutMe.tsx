@@ -1,11 +1,11 @@
-import React from 'react';
+import React, { useContext } from 'react';
 import { TranslationContext } from '../../../contexts/translationContext';
 import { linksArray } from '../../../utils/constants';
 import StarsBg from '../../Deco/StarsBg/StarsBg';
 import NextSectionLink from '../../NextSectionLink/NextSectionLink';
 
 const AboutMe: React.FC = () => {
-  const translation = React.useContext(TranslationContext);
+  const translation = useContext(TranslationContext);
 
   return (
     <section className="about app__section" id="about">

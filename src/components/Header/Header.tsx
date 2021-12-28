@@ -1,9 +1,9 @@
-import React from 'react';
+import React, { useState } from 'react';
 import Navigation from "../Navigation/Navigation";
 import Burger from './Burger/Burger';
 
 const Header: React.FC = () => {
-  const [isActive, setIsActive] = React.useState<boolean>(false);
+  const [isActive, setIsActive] = useState<boolean>(false);
   const headerWrapClassName = `header__wrap ${isActive ? 'header__wrap_active' : ''}`;
 
 

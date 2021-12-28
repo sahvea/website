@@ -1,4 +1,4 @@
-import React, { Dispatch, MouseEvent } from 'react';
+import React, { Dispatch, MouseEvent, useContext } from 'react';
 import { TranslationContext } from '../../contexts/translationContext';
 
 
@@ -8,7 +8,7 @@ interface Props {
 }
 
 const LanguageButton: React.FC<Props> = ({ className, onLangClick }) => {
-  const translation = React.useContext(TranslationContext);
+  const translation = useContext(TranslationContext);
   const buttonClassName: string = `app__button app__animated-element lang-button ${className ? className : ''}`;
 
 
