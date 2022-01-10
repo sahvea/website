@@ -39,7 +39,7 @@ const App: React.FC = () => {
   return (
     <TranslationContext.Provider value={translations[lang]}>
 
-      { mobResolution && <Header /> }
+      { mobResolution && <Header onLangClick={setLang} /> }
 
       <main>
         <Routes>

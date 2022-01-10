@@ -12,9 +12,14 @@
   top: -150vh;
   right: 0;
   height: 100vh;
-  padding: 10px 20px;
   width: 55vw;
   min-width: 600px;
+  padding: 10px 20px;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: flex-end;
   transition: top .2s linear;
   background-color: rgba($color_black, .7);
 
