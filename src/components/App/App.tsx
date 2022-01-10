@@ -43,21 +43,13 @@ const App: React.FC = () => {
 
       <main>
         <Routes>
-          <Route path="/"
-            element={ <Main /> }
-          />
+          <Route path="/" element={ <Main /> } />
 
-          <Route path="/projects"
-            element={ <Projects /> }
-          />
+          <Route path="/projects" element={ <Projects /> } />
 
-          <Route path="/contact"
-            element={ <Contact /> }
-          />
+          <Route path="/contact" element={ <Contact /> } />
 
-          <Route path="*"
-            element={ <NotFound /> }
-          />
+          <Route path="*" element={ <NotFound /> } />
         </Routes>
 
         { !mobResolution && <Sidebar onLangClick={setLang} /> }
