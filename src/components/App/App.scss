@@ -15,6 +15,14 @@
   cursor: url('../../images/cursor/cursor.svg') 6 6, auto;
 }
 
+.app__loading {
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
 .app__section {
   position: relative;
   min-height: 100vh;

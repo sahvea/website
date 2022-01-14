@@ -86,3 +86,11 @@ $bezier: cubic-bezier(0.02, 0.01, 0.31, 1);
     }
   }
 }
+
+
+@include AtTablet {
+  .flying {
+    top: 35%;
+    right: 20%;
+  }
+}
